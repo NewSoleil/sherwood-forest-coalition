@@ -242,10 +242,10 @@
 
                 <!-- Right: Stacked Before/After Photos -->
                 <div class="order-1 lg:order-2 animate-fade-in">
-                    <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-3">
                         <!-- BEFORE -->
                         <div class="relative rounded-2xl overflow-hidden shadow-xl">
-                            <img src="https://z-cdn-media.chatglm.cn/files/fa969955-48a8-4013-bb4d-591d791cdf50.jpg?auth_key=1879123939-16edf27948a24bfbb430c25dd1254cfb-0-79c40ff6e46937ef13d36b8c17947e64" alt="Sherwood Forest before — aerial with palm trees" class="w-full h-[35vh] lg:h-[42vh] object-cover">
+                            <img src="before_aerial_2.png" alt="Sherwood Forest before — aerial with palm trees" class="w-full h-48 lg:h-[38vh] object-cover">
                             <div class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
                                 Before
                             </div>
@@ -255,12 +255,12 @@
                         </div>
                         <!-- AFTER -->
                         <div class="relative rounded-2xl overflow-hidden shadow-xl">
-                            <img src="https://z-cdn-media.chatglm.cn/files/b129976b-05d5-4572-8540-5d1702730ca8.jpeg?auth_key=1879123939-767c34d909ad4a37ab0e4977452f5463-0-b01a2542a645996a736f1addf252c0d9" alt="Developer's ugly buildings at Parthenia & Louise" class="w-full h-[35vh] lg:h-[42vh] object-cover">
+                            <img src="after_demolition_1.png" alt="After demolition — bare earth Feb 25 2026" class="w-full h-48 lg:h-[38vh] object-cover">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
-                                After
+                                After — Feb 25, 2026
                             </div>
                             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-900/80 to-transparent p-4">
-                                <p class="text-white text-xs font-semibold">Ugly, dense boxes — no trees, no character</p>
+                                <p class="text-white text-xs font-semibold">Demolished — 32 structures planned here</p>
                             </div>
                         </div>
                     </div>
@@ -365,8 +365,8 @@
                 <span class="text-xs text-stone-400 font-medium">MLS Listing Photos</span>
             </div>
 
-            <!-- BEFORE photos — 3 across -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 scroll-reveal">
+            <!-- BEFORE photos — 2 across since one is already in hero -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 scroll-reveal">
                 <div class="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer" onclick="openLightbox('before_aerial_2.png', 'Aerial view — tennis courts, palm trees, manicured lawns. The beautiful 2.5-acre estate before demolition.')">
                     <img src="before_aerial_2.png" alt="Before — aerial showing tennis courts and full estate" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -383,15 +383,6 @@
                     </div>
                     <div class="absolute top-3 left-3 bg-black/70 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full backdrop-blur-sm">
                         Full 2.5-Acre Estate
-                    </div>
-                </div>
-                <div class="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer" onclick="openLightbox('before_aerial_1.png', 'Close aerial view of the home surrounded by hundreds of mature palm trees, with pool and grounds visible.')">
-                    <img src="before_aerial_1.png" alt="Before — close aerial of home and palm trees" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                        <p class="text-white text-xs font-semibold">Click to enlarge</p>
-                    </div>
-                    <div class="absolute top-3 left-3 bg-black/70 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full backdrop-blur-sm">
-                        Home &amp; Palm Trees
                     </div>
                 </div>
             </div>
@@ -463,15 +454,19 @@
 
                 <!-- Coalition Flyer -->
                 <div class="scroll-reveal rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 group">
-                    <div class="relative overflow-hidden bg-white dark:bg-stone-900">
-                        <img src="SHF_Coalition_Flyer_8.jpg" alt="Sherwood Forest Coalition Flyer — Protect Our Neighborhood" class="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
-                            📄 Our Flyer
-                        </div>
+                    <div class="relative bg-stone-900 flex flex-col items-center justify-center p-10 min-h-[320px]">
+                        <iconify-icon icon="lucide:file-text" width="64" class="text-red-500 mb-4"></iconify-icon>
+                        <p class="text-white font-bold text-xl text-center mb-2">Sherwood Forest Coalition</p>
+                        <p class="text-red-400 font-bold text-lg text-center mb-1">Protect Our Neighborhood!</p>
+                        <p class="text-stone-400 text-sm text-center mb-6">Official community flyer — download and share with your neighbors</p>
+                        <a href="SHF_Coalition_Flyer_8.pdf" download class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full transition-colors">
+                            <iconify-icon icon="lucide:download" width="18"></iconify-icon>
+                            Download Flyer (PDF)
+                        </a>
                     </div>
                     <div class="p-4 bg-white dark:bg-stone-900">
                         <p class="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider mb-1">Protect Our Neighborhood</p>
-                        <p class="text-sm text-stone-600 dark:text-stone-400">Download and share this flyer with your neighbors. Help spread the word about what's at stake — no traffic studies, no safety reviews, no community oversight.</p>
+                        <p class="text-sm text-stone-600 dark:text-stone-400">Download and share this flyer with your neighbors. Help spread the word — no traffic studies, no safety reviews, no community oversight.</p>
                     </div>
                 </div>
             </div>
@@ -501,16 +496,8 @@
             <div class="grid lg:grid-cols-2 gap-8">
                 <!-- CHRISTY'S VIDEO -->
                 <div class="scroll-reveal">
-                    <div class="video-placeholder rounded-2xl aspect-video cursor-pointer group" onclick="playYouTubeVideo(this, '1rHNldjm8hM')" style="background-image: url('https://img.youtube.com/vi/1rHNldjm8hM/maxresdefault.jpg'); background-size: cover; background-position: center;">
-                        <div class="video-overlay absolute inset-0 z-10 flex items-center justify-center bg-black/50 transition-opacity duration-300">
-                            <div class="relative z-10 text-center">
-                                <div class="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors">
-                                    <iconify-icon icon="lucide:play" width="36" class="text-white ml-1"></iconify-icon>
-                                </div>
-                                <p class="text-white font-semibold text-lg">Christy's Story</p>
-                                <p class="text-stone-300 text-sm mt-1">Adjacent neighbor — Parthenia & Louise</p>
-                            </div>
-                        </div>
+                    <div class="rounded-2xl aspect-video overflow-hidden shadow-xl">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/1rHNldjm8hM" title="Christy — Sherwood Forest Neighbor Testimony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="mt-4 bg-stone-100 dark:bg-stone-800/50 backdrop-blur-sm rounded-xl p-5 border border-stone-200 dark:border-stone-700/30">
                         <iconify-icon icon="lucide:quote" width="24" class="text-red-500 mb-2"></iconify-icon>
@@ -693,74 +680,63 @@
     <section id="legal" class="py-16 bg-stone-950 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-12 scroll-reveal">
-                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-400 mb-4">Our Strongest Legal Argument</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-4">The <em class="text-red-400">"Manufactured Vacancy"</em> Case</h2>
-                <p class="text-stone-400 leading-relaxed">The City's own rules already anticipate and prohibit exactly what happened here. The LA City Planning SHRA Implementation Memo explicitly states a project may <strong class="text-white">NOT</strong> be approved if it involves housing "that has been occupied by a tenant within the five years prior to the application date, including housing that has been demolished." The developer didn't find a vacant lot — they <em>created</em> one by demolishing a beautiful family home.</p>
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-400 mb-4">What The Developer Did Wrong</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-4">Four Violations That <em class="text-red-400">Cannot Be Ignored</em></h2>
+                <p class="text-stone-400 leading-relaxed">This development was built on a foundation of legal violations — from demolishing an occupied home to game a state law, to artificially splitting one large project into two to avoid public review. Here is what the record shows.</p>
             </div>
 
-            <!-- 3 Action Cards -->
-            <div class="grid md:grid-cols-3 gap-6 scroll-reveal">
+            <!-- Developer Violations Grid -->
+            <div class="grid md:grid-cols-2 gap-6 scroll-reveal">
 
-                <!-- Card 1: CPRA Request -->
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors group">
+                <!-- Violation 1: Manufactured Vacancy -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
                     <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-5">
-                        <iconify-icon icon="lucide:file-search" width="24" class="text-white"></iconify-icon>
+                        <iconify-icon icon="lucide:home-x" width="24" class="text-white"></iconify-icon>
                     </div>
-                    <div class="text-xs font-bold uppercase tracking-widest text-red-400 mb-2">Do This First</div>
-                    <h3 class="font-bold text-lg text-white mb-3">File a Public Records Request</h3>
-                    <p class="text-stone-400 text-sm leading-relaxed mb-4">File a <strong class="text-white">California Public Records Act (CPRA)</strong> request with the City of LA. It's <span class="text-green-400 font-bold">free</span> and the City must respond within 10 days. Request:</p>
-                    <ul class="space-y-2 text-sm text-stone-400">
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:chevron-right" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>Demolition permit(s) for the Parthenia parcels</li>
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:chevron-right" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>No Net Loss Declaration(s) submitted with SHRA applications</li>
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:chevron-right" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>All internal Planning Dept. communications about these applications</li>
-                    </ul>
-                    <div class="mt-5 pt-5 border-t border-white/10">
-                        <a href="https://records.lacity.org" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm text-red-400 font-semibold hover:text-red-300 transition-colors">
-                            <iconify-icon icon="lucide:external-link" width="14"></iconify-icon>
-                            File at records.lacity.org
-                        </a>
+                    <div class="text-xs font-bold uppercase tracking-widest text-red-400 mb-2">Violation #1</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Manufactured Vacancy</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-4">The developer demolished a beautiful, occupied family home — cutting down hundreds of trees, filling the swimming pool, removing the tennis court — and then applied under SB 1123, a law designed only for <em>genuinely vacant</em> land. The City's own SHRA Implementation Memo explicitly prohibits approval when housing has been demolished to manufacture vacancy.</p>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                        <p class="text-xs text-red-300 font-semibold">The demolition permit date and SHRA application date are public record — and the gap between them is damning.</p>
                     </div>
                 </div>
 
-                <!-- Card 2: Gather Evidence -->
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors group">
+                <!-- Violation 2: Piecemealing -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
                     <div class="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mb-5">
-                        <iconify-icon icon="lucide:camera" width="24" class="text-white"></iconify-icon>
+                        <iconify-icon icon="lucide:scissors" width="24" class="text-white"></iconify-icon>
                     </div>
-                    <div class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Critical Evidence</div>
-                    <h3 class="font-bold text-lg text-white mb-3">Gather Photos &amp; Dates</h3>
-                    <p class="text-stone-400 text-sm leading-relaxed mb-4">Timestamped photos and documents are <strong class="text-white">documentary evidence</strong> directly supporting the manufactured vacancy argument. If you have any of the following, please share them with the coalition:</p>
-                    <ul class="space-y-2 text-sm text-stone-400">
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:chevron-right" width="14" class="text-amber-400 mt-0.5 shrink-0"></iconify-icon>Photos of the home before demolition</li>
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:chevron-right" width="14" class="text-amber-400 mt-0.5 shrink-0"></iconify-icon>Photos of tree removal or demolition in progress</li>
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:chevron-right" width="14" class="text-amber-400 mt-0.5 shrink-0"></iconify-icon>Evidence the property was occupied before demolition</li>
-                    </ul>
-                    <div class="mt-5 pt-5 border-t border-white/10">
-                        <a href="mailto:sherwoodforestcoalition@gmail.com" class="inline-flex items-center gap-2 text-sm text-amber-400 font-semibold hover:text-amber-300 transition-colors">
-                            <iconify-icon icon="lucide:mail" width="14"></iconify-icon>
-                            Email us your photos
-                        </a>
+                    <div class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Violation #2</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Illegal Project Piecemealing</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-4">Both parcels are owned by the same LLC — 17531 Parthenia Street LLC, c/o Lior Mandelbaum — and use the same engineering firm. By filing two separate applications, the developer deliberately stays below the 10-unit threshold that triggers full public review. Combined, the project would yield up to 32 units. California's anti-piecemealing doctrine prohibits exactly this type of artificial fragmentation.</p>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                        <p class="text-xs text-amber-300 font-semibold">Same owner. Same engineer. Two applications filed to game the system.</p>
                     </div>
                 </div>
 
-                <!-- Card 3: Attorney -->
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors group">
-                    <div class="w-12 h-12 bg-stone-600 rounded-xl flex items-center justify-center mb-5">
-                        <iconify-icon icon="lucide:scale" width="24" class="text-white"></iconify-icon>
+                <!-- Violation 3: Lot Size -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
+                    <div class="w-12 h-12 bg-stone-500 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:ruler" width="24" class="text-white"></iconify-icon>
                     </div>
-                    <div class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-2">Legal Path</div>
-                    <h3 class="font-bold text-lg text-white mb-3">Consult a Land Use Attorney</h3>
-                    <p class="text-stone-400 text-sm leading-relaxed mb-4">The <strong class="text-white">manufactured vacancy</strong> and <strong class="text-white">piecemealing</strong> arguments are strong enough that even a free initial consultation with a California land use attorney is worth pursuing — especially to evaluate whether the already-approved <strong class="text-white">Tract Map 85030 can be legally challenged.</strong></p>
-                    <ul class="space-y-2 text-sm text-stone-400">
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:chevron-right" width="14" class="text-stone-400 mt-0.5 shrink-0"></iconify-icon>Many land use attorneys offer free initial calls</li>
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:chevron-right" width="14" class="text-stone-400 mt-0.5 shrink-0"></iconify-icon>A legal challenge to Tract Map 85030 may still be possible</li>
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:chevron-right" width="14" class="text-stone-400 mt-0.5 shrink-0"></iconify-icon>Email us — we are coordinating with legal counsel</li>
-                    </ul>
-                    <div class="mt-5 pt-5 border-t border-white/10">
-                        <a href="mailto:sherwoodforestcoalition@gmail.com" class="inline-flex items-center gap-2 text-sm text-stone-300 font-semibold hover:text-white transition-colors">
-                            <iconify-icon icon="lucide:mail" width="14"></iconify-icon>
-                            Get in touch with the coalition
-                        </a>
+                    <div class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-2">Violation #3</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Exceeds Statutory Lot Size Cap</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-4">SB 1123 limits eligible single-family-zoned parcels to a maximum of 1.5 acres. The submitted Tract Map for Lot 16 alone shows a remainder parcel of 25,656 square feet — over half an acre by itself. The City has not provided written confirmation that the full pre-subdivision acreage was independently verified.</p>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                        <p class="text-xs text-stone-300 font-semibold">This is a 2.5-acre estate. SB 1123 was written for lots under 1.5 acres.</p>
+                    </div>
+                </div>
+
+                <!-- Violation 4: Infrastructure -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
+                    <div class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:alert-triangle" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Violation #4</div>
+                    <h3 class="font-bold text-lg text-white mb-3">No Infrastructure Review</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-4">The submitted tract map notes drainage by surface method only and sewers available solely from the adjacent street. With up to 32 two-story units on two adjacent parcels sharing a common access and fire lane, no cumulative infrastructure analysis has been conducted — because ministerial approval doesn't require one. Sewer capacity, water supply, stormwater, and emergency access have never been assessed.</p>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                        <p class="text-xs text-blue-300 font-semibold">32 units. One access road. No traffic or emergency access study. Ever.</p>
                     </div>
                 </div>
 
@@ -813,8 +789,8 @@
 
                             <div class="bg-red-600/20 border-2 border-red-500/50 rounded-2xl p-6 text-center">
                                 <p class="text-white text-lg font-bold mb-2">Send us an email to join:</p>
-                                <a href="mailto:sherwoodforestcoalition@gmail.com" class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white text-xl font-bold px-8 py-4 rounded-full transition-all email-btn-glow">
-                                    <iconify-icon icon="lucide:mail" width="24"></iconify-icon>
+                                <a href="mailto:sherwoodforestcoalition@gmail.com" class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white text-base sm:text-xl font-bold px-4 sm:px-8 py-4 rounded-full transition-all email-btn-glow break-all text-center">
+                                    <iconify-icon icon="lucide:mail" width="24" class="shrink-0"></iconify-icon>
                                     sherwoodforestcoalition@gmail.com
                                 </a>
                                 <p class="text-stone-400 text-sm mt-4">We'll reply with the Zoom link and meeting details. Every neighbor counts.</p>
@@ -955,7 +931,7 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
-    <footer class="bg-black text-stone-400 py-16">
+    <footer class="bg-black text-stone-400 py-16 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                 <div>
@@ -987,8 +963,8 @@
                 </div>
                 <div>
                     <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Contact the Coalition</h4>
-                    <a href="mailto:sherwoodforestcoalition@gmail.com" class="inline-flex items-center gap-2 text-red-400 hover:text-red-300 font-bold text-sm mb-4 transition-colors">
-                        <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                    <a href="mailto:sherwoodforestcoalition@gmail.com" class="inline-flex items-center gap-2 text-red-400 hover:text-red-300 font-bold text-sm mb-4 transition-colors break-all">
+                        <iconify-icon icon="lucide:mail" width="16" class="shrink-0"></iconify-icon>
                         sherwoodforestcoalition@gmail.com
                     </a>
                     <p class="text-xs text-stone-600 mt-3">Email us to join the May 20th community Zoom meeting and get involved.</p>
