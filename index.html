@@ -14,14 +14,7 @@
     <script>
         tailwind.config = {
             darkMode: 'media',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] } } }
         }
     </script>
     <style>
@@ -32,89 +25,88 @@
         .animate-slide-up { animation: slide-up 0.8s ease-out forwards; }
         .email-btn-glow { box-shadow: 0 0 20px rgba(220,38,38,0.3), 0 0 40px rgba(220,38,38,0.15); }
         .email-btn-glow:hover { box-shadow: 0 0 30px rgba(220,38,38,0.5), 0 0 60px rgba(220,38,38,0.25); }
-        .hero-stripe {
-            background: radial-gradient(ellipse at 20% 80%, rgba(34, 197, 94, 0.04) 0%, transparent 50%),
-                        radial-gradient(ellipse at 80% 20%, rgba(220, 38, 38, 0.04) 0%, transparent 50%),
-                        repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(0,0,0,0.008) 40px, rgba(0,0,0,0.008) 41px);
-        }
+        .hero-stripe { background: radial-gradient(ellipse at 20% 80%, rgba(34, 197, 94, 0.04) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(220, 38, 38, 0.04) 0%, transparent 50%), repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(0,0,0,0.008) 40px, rgba(0,0,0,0.008) 41px); }
     </style>
 </head>
 <body class="font-sans bg-white text-stone-900 dark:bg-black dark:text-stone-100 transition-colors duration-300">
 
-    <!-- NAVBAR (unchanged) -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/95 dark:bg-black/95 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-2 group">
-                <iconify-icon icon="lucide:trees" width="28" class="text-red-600 dark:text-red-500 group-hover:rotate-12 transition-transform duration-300"></iconify-icon>
-                <div class="leading-tight">
-                    <span class="font-serif font-bold text-lg text-black dark:text-white block">Sherwood Forest</span>
-                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-red-600 dark:text-red-500">Coalition</span>
-                </div>
-            </a>
-            <!-- rest of navbar remains the same as your original -->
-        </div>
-    </nav>
+<!-- ==================== NAVBAR (unchanged) ==================== -->
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/95 dark:bg-black/95 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2 group">
+            <iconify-icon icon="lucide:trees" width="28" class="text-red-600 dark:text-red-500 group-hover:rotate-12 transition-transform duration-300"></iconify-icon>
+            <div class="leading-tight">
+                <span class="font-serif font-bold text-lg text-black dark:text-white block">Sherwood Forest</span>
+                <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-red-600 dark:text-red-500">Coalition</span>
+            </div>
+        </a>
+        <a href="mailto:sherwoodforestcoalition@gmail.com" class="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full flex items-center gap-2">
+            <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+            Email Us
+        </a>
+    </div>
+</nav>
 
-    <!-- HERO - Updated with 64 structures and new Zoom message -->
-    <section class="relative min-h-screen flex items-center bg-white dark:bg-black hero-stripe pt-16">
-        <div class="max-w-7xl mx-auto px-6 py-20 w-full">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="order-2 lg:order-1">
-                    <div class="animate-slide-up">
-                        <div class="inline-flex items-center gap-2 border-2 border-red-600 text-red-600 dark:text-red-400 dark:border-red-500 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
-                            <iconify-icon icon="lucide:shield-alert" width="14"></iconify-icon>
-                            Protect Our Neighborhood
-                        </div>
+<!-- ==================== HERO - UPDATED ==================== -->
+<section class="relative min-h-screen flex items-center bg-white dark:bg-black hero-stripe pt-16">
+    <div class="max-w-7xl mx-auto px-6 py-20 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="animate-slide-up">
+                    <div class="inline-flex items-center gap-2 border-2 border-red-600 text-red-600 dark:text-red-400 dark:border-red-500 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+                        <iconify-icon icon="lucide:shield-alert" width="14"></iconify-icon>
+                        Protect Our Neighborhood
+                    </div>
 
-                        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-black dark:text-white leading-[1.05] tracking-tight mb-6">
-                            Our Neighborhood Is Being <span class="text-red-600 dark:text-red-500">Destroyed</span>
-                        </h1>
+                    <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-black dark:text-white leading-[1.05] tracking-tight mb-6">
+                        Our Neighborhood Is Being <span class="text-red-600 dark:text-red-500">Destroyed</span>
+                    </h1>
 
-                        <p class="text-lg sm:text-xl text-stone-600 dark:text-stone-400 leading-relaxed mb-8 max-w-xl">
-                            Developers are exploiting Sacramento's new Senate Housing Bills to bulldoze Sherwood Forest — cutting down hundreds of trees, ignoring RA-1 and Equestrian zoning, and planning <strong class="text-black dark:text-white">potentially 64 massive structures</strong> (main buildings + attached ADUs) where one home once stood.
-                        </p>
+                    <p class="text-lg sm:text-xl text-stone-600 dark:text-stone-400 leading-relaxed mb-8 max-w-xl">
+                        Developers are exploiting Sacramento's new Senate Housing Bills to bulldoze Sherwood Forest — cutting down hundreds of trees, ignoring RA-1 and Equestrian zoning, and planning <strong class="text-black dark:text-white">potentially 64 massive structures</strong> (main buildings + attached ADUs) where one home once stood.
+                    </p>
 
-                        <div class="bg-red-600 rounded-2xl p-6 text-white">
-                            <p class="text-red-100 mb-4">We held a very informative community Zoom call on May 20th where neighbors shared excellent ideas we are now implementing.</p>
-                            <p class="text-red-100 mb-4">Send us an email to be included in our next Zoom call and receive updates on our progress:</p>
-                            <a href="mailto:sherwoodforestcoalition@gmail.com" class="inline-flex items-center gap-3 bg-white text-red-600 text-sm font-bold px-6 py-3 rounded-full transition-all hover:bg-stone-100 email-btn-glow w-full justify-center text-center">
-                                <iconify-icon icon="lucide:mail" width="18" class="shrink-0"></iconify-icon>
-                                <span>sherwoodforestcoalition<wbr>@gmail.com</span>
-                            </a>
-                        </div>
+                    <div class="bg-red-600 rounded-2xl p-6 text-white">
+                        <p class="text-red-100 mb-4">We held a very informative community Zoom call on May 20th where neighbors shared excellent ideas we are now implementing.</p>
+                        <p class="text-red-100 mb-4">Send us an email to be included in our next Zoom call and receive updates on our progress:</p>
+                        <a href="mailto:sherwoodforestcoalition@gmail.com" class="inline-flex items-center gap-3 bg-white text-red-600 text-sm font-bold px-6 py-3 rounded-full transition-all hover:bg-stone-100 email-btn-glow w-full justify-center text-center">
+                            <iconify-icon icon="lucide:mail" width="18" class="shrink-0"></iconify-icon>
+                            <span>sherwoodforestcoalition<wbr>@gmail.com</span>
+                        </a>
                     </div>
                 </div>
-
-                <!-- Your original before/after photos stay here -->
             </div>
+
+            <!-- Original before/after photos stay here -->
         </div>
-    </section>
-
-    <!-- NEW PARTHENIA SECTION - right after Neighbor Voices -->
-    <section class="py-16 bg-stone-50 dark:bg-stone-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-serif font-bold text-center mb-4">The Same Developer — One Block Away</h2>
-            <p class="text-xl text-center text-stone-600 dark:text-stone-400 mb-12 max-w-3xl mx-auto">
-                Now imagine <strong>64</strong> of these massive, blocky, institutional-style buildings that dominate the streetscape on the corner of Parthenia and Shoshone.
-            </p>
-            
-            <div class="grid md:grid-cols-2 gap-6">
-                <img src="Encino_Parthenia_1.png" alt="Dark multi-unit buildings" class="rounded-xl shadow-lg w-full">
-                <img src="Encino_Parthenia_4.png" alt="White and dark buildings with fence" class="rounded-xl shadow-lg w-full">
-                <img src="Encino_Parthenia_3.png" alt="Construction site with dumpster" class="rounded-xl shadow-lg w-full">
-                <img src="Encino_Parthenia_2.png" alt="Dark buildings with landscaping" class="rounded-xl shadow-lg w-full">
-            </div>
-        </div>
-    </section>
-
-    <!-- The rest of your original content (Evidence, Voices, Legislation, etc.) goes here. Since you have the full file, you can keep everything after this point the same. -->
-
-    <!-- SAMPLE LETTER REFERENCE -->
-    <div class="max-w-7xl mx-auto px-6 py-8 text-center bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-2xl my-8">
-        <p class="font-medium text-red-700 dark:text-red-400">
-            → For a <strong>sample letter</strong> to send to your representatives, scroll to the very bottom of this page.
-        </p>
     </div>
+</section>
+
+<!-- ==================== NEW SECTION - Parthenia Photos (after Neighbor Voices) ==================== -->
+<section class="py-16 bg-stone-50 dark:bg-stone-900">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-serif font-bold text-center mb-4">The Same Developer — One Block Away</h2>
+        <p class="text-xl text-center text-stone-600 dark:text-stone-400 mb-12 max-w-3xl mx-auto">
+            Now imagine <strong>64</strong> of these massive, blocky, institutional-style buildings that dominate the streetscape on the corner of Parthenia and Shoshone.
+        </p>
+        <div class="grid md:grid-cols-2 gap-6">
+            <img src="Encino_Parthenia_1.png" alt="Dark multi-unit buildings" class="rounded-xl shadow-lg w-full">
+            <img src="Encino_Parthenia_4.png" alt="White and dark buildings with fence" class="rounded-xl shadow-lg w-full">
+            <img src="Encino_Parthenia_3.png" alt="Construction site with dumpster" class="rounded-xl shadow-lg w-full">
+            <img src="Encino_Parthenia_2.png" alt="Dark buildings with landscaping" class="rounded-xl shadow-lg w-full">
+        </div>
+    </div>
+</section>
+
+<!-- SAMPLE LETTER REFERENCE -->
+<div class="max-w-7xl mx-auto px-6 py-8 text-center bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-2xl my-8">
+    <p class="font-medium text-red-700 dark:text-red-400">
+        → For a <strong>sample letter</strong> to send to your representatives, scroll to the very bottom of this page.
+    </p>
+</div>
+
+<!-- ==================== PASTE THE REST OF YOUR ORIGINAL CODE HERE ==================== -->
+<!-- (Evidence, Voices, Legislation, Legal Strategy, Take Action, Footer, Scripts, etc.) -->
 
 </body>
 </html>
