@@ -14,7 +14,14 @@
     <script>
         tailwind.config = {
             darkMode: 'media',
-            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] } } }
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
         }
     </script>
     <style>
@@ -30,7 +37,7 @@
 </head>
 <body class="font-sans bg-white text-stone-900 dark:bg-black dark:text-stone-100 transition-colors duration-300">
 
-<!-- ==================== NAVBAR (unchanged) ==================== -->
+<!-- NAVBAR - unchanged -->
 <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/95 dark:bg-black/95 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
     <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" class="flex items-center gap-2 group">
@@ -47,7 +54,7 @@
     </div>
 </nav>
 
-<!-- ==================== HERO - UPDATED ==================== -->
+<!-- HERO - Updated -->
 <section class="relative min-h-screen flex items-center bg-white dark:bg-black hero-stripe pt-16">
     <div class="max-w-7xl mx-auto px-6 py-20 w-full">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -76,13 +83,12 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Original before/after photos stay here -->
+            <!-- Your original before/after photos go here - keep them -->
         </div>
     </div>
 </section>
 
-<!-- ==================== NEW SECTION - Parthenia Photos (after Neighbor Voices) ==================== -->
+<!-- NEW SECTION: Parthenia Photos -->
 <section class="py-16 bg-stone-50 dark:bg-stone-900">
     <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-3xl font-serif font-bold text-center mb-4">The Same Developer — One Block Away</h2>
@@ -98,15 +104,15 @@
     </div>
 </section>
 
-<!-- SAMPLE LETTER REFERENCE -->
+<!-- SAMPLE LETTER NOTICE -->
 <div class="max-w-7xl mx-auto px-6 py-8 text-center bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-2xl my-8">
     <p class="font-medium text-red-700 dark:text-red-400">
         → For a <strong>sample letter</strong> to send to your representatives, scroll to the very bottom of this page.
     </p>
 </div>
 
-<!-- ==================== PASTE THE REST OF YOUR ORIGINAL CODE HERE ==================== -->
-<!-- (Evidence, Voices, Legislation, Legal Strategy, Take Action, Footer, Scripts, etc.) -->
+<!-- ==================== PASTE ALL YOUR ORIGINAL CONTENT BELOW THIS LINE ==================== -->
+<!-- Evidence, Voices, Legislation, Legal Strategy, Take Action, Footer, Scripts, etc. -->
 
 </body>
 </html>
