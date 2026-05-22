@@ -455,6 +455,47 @@
                 </div>
             </div>
 
+            <!-- Permit Records -->
+            <div class="scroll-reveal mb-10">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-bold">
+                        <iconify-icon icon="lucide:file-text" width="16"></iconify-icon>
+                        OFFICIAL CITY PERMIT RECORDS — Both Parcels
+                    </div>
+                    <div class="flex-1 h-px bg-stone-200 dark:bg-stone-800"></div>
+                    <span class="text-xs text-stone-400 font-medium">LA City Building & Safety — Public Record</span>
+                </div>
+
+                <div class="bg-blue-950/20 border border-blue-900/40 rounded-2xl p-4 mb-6">
+                    <p class="text-sm text-blue-300 leading-relaxed">These are official City of Los Angeles building permit records — public documents available to anyone. They show <strong class="text-white">16 new building permits submitted on the same day (April 29, 2026)</strong> across both parcels, by the same developer, using the same Job #. Each unit includes an attached JADU (Junior ADU). This is the piecemealing concern in plain sight.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <!-- 17545 permits -->
+                    <div class="rounded-2xl overflow-hidden border-2 border-blue-800 group cursor-pointer" onclick="openLightbox('17545_permits.png', '17545 W Parthenia St — Official City permit records showing demolition finaled March 2026 and 8 new building permits submitted April 29, 2026. Each unit includes an attached JADU.')">
+                        <img src="17545_permits.png" alt="17545 W Parthenia — City permit records" class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="bg-blue-900 text-white p-3 flex items-center justify-between">
+                            <div>
+                                <p class="text-xs font-bold">17545 W. Parthenia St.</p>
+                                <p class="text-[10px] text-blue-300">Demolition finaled + 8 new permits — April 29, 2026</p>
+                            </div>
+                            <span class="text-[10px] bg-blue-700 px-2 py-1 rounded-full font-bold">Click to enlarge</span>
+                        </div>
+                    </div>
+                    <!-- 17531 permits -->
+                    <div class="rounded-2xl overflow-hidden border-2 border-blue-800 group cursor-pointer" onclick="openLightbox('17531_permits.png', '17531 W Parthenia St — Official City permit records showing 8 new building permits submitted April 29, 2026. Same Job # as 17545. Each unit includes an attached JADU.')">
+                        <img src="17531_permits.png" alt="17531 W Parthenia — City permit records" class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="bg-blue-900 text-white p-3 flex items-center justify-between">
+                            <div>
+                                <p class="text-xs font-bold">17531 W. Parthenia St.</p>
+                                <p class="text-[10px] text-blue-300">8 new permits same day — Job # B26VN11387</p>
+                            </div>
+                            <span class="text-[10px] bg-blue-700 px-2 py-1 rounded-full font-bold">Click to enlarge</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Architect Plans + Flyer -->
             <div class="grid sm:grid-cols-2 gap-6">
                 <!-- Architect Plans Photo -->
@@ -1133,11 +1174,11 @@
                                 <iconify-icon icon="lucide:clipboard" width="12"></iconify-icon>
                                 Copy
                             </button>
-                            <p class="mb-2"><strong>Subject:</strong> FORMAL OPPOSITION – Vesting Tentative Tract Map LA No. 85030 and Related Application at 17531 W. Parthenia Street — Demand for Project Aggregation Review, Eligibility Determination, and Immediate Suspension of Further Approvals</p>
+                            <p class="mb-2"><strong>Subject:</strong> FORMAL OPPOSITION – Vesting Tentative Tract Map LA No. 85030 and Related Application at 17545 and 17531 W. Parthenia Street — Demand for Project Aggregation Review, Eligibility Determination, and Immediate Suspension of Further Approvals</p>
                             <br>
                             <p>Dear Councilmember Lee and City Planning Officials,</p>
                             <br>
-                            <p>We, the residents and neighbors of the Sherwood Forest community, write with urgent concern and formal opposition regarding the proposed developments at 17531 W. Parthenia Street, Northridge, CA 91325 (APN: 2768-014-013), currently under review under the Starter Home Revitalization Act (SB 684/SB 1123).</p>
+                            <p>We, the residents and neighbors of the Sherwood Forest community, write with urgent concern and formal opposition regarding the proposed developments at 17545 and 17531 W. Parthenia Street, Northridge, CA 91325, currently under review under the Starter Home Revitalization Act (SB 684/SB 1123).</p>
                             <br>
                             <p>Together, the two applications propose up to 32 two-story residential structures on what is effectively a single contiguous site. This is not a "starter home" project. This is a large-scale development that appears to fall outside the intended scope of the Starter Home Revitalization Act.</p>
                             <br>
@@ -1305,11 +1346,11 @@
         }
 
         function copyTemplate() {
-            const templateText = `Subject: FORMAL OPPOSITION – Vesting Tentative Tract Map LA No. 85030 and Related Application at 17531 W. Parthenia Street — Demand for Project Aggregation Review, Eligibility Determination, and Immediate Suspension of Further Approvals
+            const templateText = `Subject: FORMAL OPPOSITION – Vesting Tentative Tract Map LA No. 85030 and Related Application at 17545 and 17531 W. Parthenia Street — Demand for Project Aggregation Review, Eligibility Determination, and Immediate Suspension of Further Approvals
 
 Dear Councilmember Lee and City Planning Officials,
 
-We, the residents and neighbors of the Sherwood Forest community, write with urgent concern and formal opposition regarding the proposed developments at 17531 W. Parthenia Street, Northridge, CA 91325 (APN: 2768-014-013, and the adjacent Lot 17 of Tract 12338), currently under review by the Los Angeles Department of City Planning under the Starter Home Revitalization Act (SB 684/SB 1123).
+We, the residents and neighbors of the Sherwood Forest community, write with urgent concern and formal opposition regarding the proposed developments at 17545 and 17531 W. Parthenia Street, Northridge, CA 91325, currently under review by the Los Angeles Department of City Planning under the Starter Home Revitalization Act (SB 684/SB 1123).
 
 One application — Vesting Tentative Tract Map LA No. 85030 — has reportedly already been approved. A second, adjacent application on the same block remains on hold. Together, these two applications propose to construct up to 32 two-story residential structures across what is effectively a single, contiguous site in one of Los Angeles' most established low-density residential neighborhoods. This is not a "starter home" project. This is a large-scale development that appears to fall outside the intended scope of the Starter Home Revitalization Act.
 
