@@ -458,7 +458,7 @@
             <!-- Permit Records -->
             <div class="scroll-reveal mb-10">
                 <div class="flex items-center gap-4 mb-6">
-                    <div class="flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    <div class="flex items-center gap-2 bg-stone-900 text-white px-4 py-2 rounded-full text-sm font-bold">
                         <iconify-icon icon="lucide:file-text" width="16"></iconify-icon>
                         OFFICIAL CITY PERMIT RECORDS — Both Parcels
                     </div>
@@ -466,31 +466,51 @@
                     <span class="text-xs text-stone-400 font-medium">LA City Building & Safety — Public Record</span>
                 </div>
 
-                <div class="bg-blue-950/20 border border-blue-900/40 rounded-2xl p-4 mb-6">
-                    <p class="text-sm text-blue-300 leading-relaxed">These are official City of Los Angeles building permit records — public documents available to anyone. They show <strong class="text-white">16 new building permits submitted on the same day (April 29, 2026)</strong> across both parcels, by the same developer, using the same Job #. Each unit includes an attached JADU (Junior ADU). This is the piecemealing concern in plain sight.</p>
+                <div class="bg-stone-100 dark:bg-stone-800 border border-stone-300 dark:border-stone-700 rounded-2xl p-5 mb-6">
+                    <p class="text-sm text-stone-700 dark:text-stone-300 leading-relaxed mb-3">What was once a <strong class="text-black dark:text-white">single 2.5-acre estate since the 1940s</strong> has been subdivided into two separate parcels — 17545 and 17531 W. Parthenia Street — by the same developer. Each parcel then had its own separate application filed, keeping each one just below the threshold that would require full public review.</p>
+                    <p class="text-sm text-stone-700 dark:text-stone-300 leading-relaxed">The permit records below show <strong class="text-black dark:text-white">16 new building permits submitted on the same day (April 29, 2026)</strong> across both parcels, by the same developer, using the same Job #. Each unit includes an attached JADU (Junior Accessory Dwelling Unit). These are official public records available to anyone through the City of Los Angeles.</p>
                 </div>
 
                 <div class="grid sm:grid-cols-2 gap-4">
                     <!-- 17545 permits -->
-                    <div class="rounded-2xl overflow-hidden border-2 border-blue-800 group cursor-pointer" onclick="openLightbox('17545_permits.png', '17545 W Parthenia St — Official City permit records showing demolition finaled March 2026 and 8 new building permits submitted April 29, 2026. Each unit includes an attached JADU.')">
-                        <img src="17545_permits.png" alt="17545 W Parthenia — City permit records" class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="bg-blue-900 text-white p-3 flex items-center justify-between">
-                            <div>
-                                <p class="text-xs font-bold">17545 W. Parthenia St.</p>
-                                <p class="text-[10px] text-blue-300">Demolition finaled + 8 new permits — April 29, 2026</p>
+                    <div class="rounded-2xl overflow-hidden border-2 border-red-300 dark:border-red-800">
+                        <div class="relative cursor-pointer group" onclick="openLightbox('17545_permits.png', '17545 W Parthenia St — Official City permit records showing demolition finaled March 2026 and 8 new building permits submitted April 29, 2026. Each unit includes an attached JADU.')">
+                            <img src="17545_permits.png" alt="17545 W Parthenia — City permit records" class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-2 right-2 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded-full backdrop-blur-sm">Click to enlarge</div>
+                        </div>
+                        <div class="bg-stone-900 text-white p-3">
+                            <p class="text-xs font-bold mb-2">17545 W. Parthenia St. — Original Property</p>
+                            <div class="space-y-1.5">
+                                <div class="flex items-center gap-2">
+                                    <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shrink-0">⚠ LOOK FOR</span>
+                                    <p class="text-[10px] text-stone-300">Row 3: <strong class="text-red-300">Demolition Permit Finaled 3/12/2026</strong> — home, tennis court, pool</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shrink-0">⚠ LOOK FOR</span>
+                                    <p class="text-[10px] text-stone-300">Bottom rows: <strong class="text-amber-300">8 new building permits all submitted 4/29/2026</strong> — same Job # B26VN11381</p>
+                                </div>
                             </div>
-                            <span class="text-[10px] bg-blue-700 px-2 py-1 rounded-full font-bold">Click to enlarge</span>
                         </div>
                     </div>
+
                     <!-- 17531 permits -->
-                    <div class="rounded-2xl overflow-hidden border-2 border-blue-800 group cursor-pointer" onclick="openLightbox('17531_permits.png', '17531 W Parthenia St — Official City permit records showing 8 new building permits submitted April 29, 2026. Same Job # as 17545. Each unit includes an attached JADU.')">
-                        <img src="17531_permits.png" alt="17531 W Parthenia — City permit records" class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="bg-blue-900 text-white p-3 flex items-center justify-between">
-                            <div>
-                                <p class="text-xs font-bold">17531 W. Parthenia St.</p>
-                                <p class="text-[10px] text-blue-300">8 new permits same day — Job # B26VN11387</p>
+                    <div class="rounded-2xl overflow-hidden border-2 border-red-300 dark:border-red-800">
+                        <div class="relative cursor-pointer group" onclick="openLightbox('17531_permits.png', '17531 W Parthenia St — Official City permit records showing 8 new building permits submitted April 29, 2026. Same Job # as 17545. Each unit includes an attached JADU.')">
+                            <img src="17531_permits.png" alt="17531 W Parthenia — City permit records" class="w-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-2 right-2 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded-full backdrop-blur-sm">Click to enlarge</div>
+                        </div>
+                        <div class="bg-stone-900 text-white p-3">
+                            <p class="text-xs font-bold mb-2">17531 W. Parthenia St. — Split Parcel</p>
+                            <div class="space-y-1.5">
+                                <div class="flex items-center gap-2">
+                                    <span class="bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shrink-0">⚠ LOOK FOR</span>
+                                    <p class="text-[10px] text-stone-300">All rows: <strong class="text-amber-300">8 new building permits all submitted 4/29/2026</strong> — same Job # B26VN11387</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shrink-0">⚠ NOTE</span>
+                                    <p class="text-[10px] text-stone-300"><strong class="text-red-300">Same day, same developer, same engineer</strong> — two separate applications on what was one lot</p>
+                                </div>
                             </div>
-                            <span class="text-[10px] bg-blue-700 px-2 py-1 rounded-full font-bold">Click to enlarge</span>
                         </div>
                     </div>
                 </div>
