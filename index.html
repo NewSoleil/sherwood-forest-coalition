@@ -288,7 +288,7 @@
             <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
                 <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-500 mb-4">The Crisis</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6">What's Happening to <em class="text-red-600 dark:text-red-500">Sherwood Forest</em></h2>
-                <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-lg">A developer is systematically changing our neighborhood — one lot at a time. Using Sacramento's new housing bills, they're replacing single-family homes with dense large-scale developments while City processes continue without public review or community input.</p>
+                <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-lg">Developers are systematically changing our neighborhood — one lot at a time. Using Sacramento's new housing bills, they're replacing single-family homes with dense large-scale developments while City processes continue without public review or community input.</p>
             </div>
 
             <div class="max-w-3xl mx-auto space-y-0">
@@ -459,12 +459,27 @@
                 </div>
             </div>
 
-            <!-- Permit Records -->
-            <div class="scroll-reveal mb-10">
+
+            <!-- Architect Plans -->
+            <div class="scroll-reveal rounded-xl overflow-hidden border-2 border-red-300 dark:border-red-800 group mb-10">
+                    <div class="relative overflow-hidden bg-stone-100 dark:bg-stone-900">
+                        <img src="https://z-cdn-media.chatglm.cn/files/bf90cf54-c874-4ee0-aaf2-7cb2d2951fc8.png?auth_key=1879130623-35ce7e077f5e4b9c8e45868fd78a4f98-0-2f724b27ff845e02a0f24cdb5cc21aa8" alt="Vesting Tentative Tract Map — Developer's plans for 9 lots" class="w-full h-80 object-contain group-hover:scale-105 transition-transform duration-700 bg-white dark:bg-stone-900">
+                        <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                            ⚠️ Developer's Plans
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white dark:bg-stone-900">
+                        <p class="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider mb-1">Vesting Tentative Tract Map No. 85030</p>
+                        <p class="text-sm text-stone-600 dark:text-stone-400">Filed April 14, 2026 — The developer's own plans show 9 lots being carved out. 8 two-story buildings with ADUs = 16 structures on half the property. Potentially up to 64 structures where one house stood.</p>
+                    </div>
+                </div>
+
+            <!-- Permit Records — Piecemealing Evidence -->
+            <div class="scroll-reveal">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="flex items-center gap-2 bg-stone-900 text-white px-4 py-2 rounded-full text-sm font-bold">
                         <iconify-icon icon="lucide:file-text" width="16"></iconify-icon>
-                        OFFICIAL CITY PERMIT RECORDS — Both Parcels
+                        PROOF OF PIECEMEALING — Official City Permit Records
                     </div>
                     <div class="flex-1 h-px bg-stone-200 dark:bg-stone-800"></div>
                     <span class="text-xs text-stone-400 font-medium">LA City Building & Safety — Public Record</span>
@@ -496,7 +511,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- 17531 permits -->
                     <div class="rounded-2xl overflow-hidden border-2 border-red-300 dark:border-red-800">
                         <div class="relative cursor-pointer group" onclick="openLightbox('17531_permits.png', '17531 W Parthenia St — Official City permit records showing 8 new building permits submitted April 29, 2026. Same Job # as 17545. Each unit includes an attached JADU.')">
@@ -519,25 +533,8 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Architect Plans -->
-            <div class="scroll-reveal rounded-xl overflow-hidden border-2 border-red-300 dark:border-red-800 group">
-                    <div class="relative overflow-hidden bg-stone-100 dark:bg-stone-900">
-                        <img src="https://z-cdn-media.chatglm.cn/files/bf90cf54-c874-4ee0-aaf2-7cb2d2951fc8.png?auth_key=1879130623-35ce7e077f5e4b9c8e45868fd78a4f98-0-2f724b27ff845e02a0f24cdb5cc21aa8" alt="Vesting Tentative Tract Map — Developer's plans for 9 lots" class="w-full h-80 object-contain group-hover:scale-105 transition-transform duration-700 bg-white dark:bg-stone-900">
-                        <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
-                            ⚠️ Developer's Plans
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white dark:bg-stone-900">
-                        <p class="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider mb-1">Vesting Tentative Tract Map No. 85030</p>
-                        <p class="text-sm text-stone-600 dark:text-stone-400">Filed April 14, 2026 — The developer's own plans show 9 lots being carved out. 8 two-story buildings with ADUs = 16 structures on half the property. Potentially up to 64 structures where one house stood.</p>
-                    </div>
-                </div>
         </div>
-    </section>
-
-    <!-- Lightbox -->
-    <div id="lightbox" class="fixed inset-0 z-[999] bg-black/95 hidden items-center justify-center p-4" onclick="closeLightbox()">
+    </section> class="fixed inset-0 z-[999] bg-black/95 hidden items-center justify-center p-4" onclick="closeLightbox()">
         <div class="relative max-w-5xl w-full" onclick="event.stopPropagation()">
             <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white/70 hover:text-white text-sm font-semibold flex items-center gap-2">
                 <iconify-icon icon="lucide:x" width="20"></iconify-icon> Close
@@ -547,66 +544,6 @@
         </div>
     </div>
 
-    <!-- ========== NEIGHBOR VOICES ========== -->
-    <section id="voices" class="py-24 bg-white dark:bg-stone-950 text-stone-900 dark:text-white">
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
-                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 mb-4">Neighbor Voices</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6">Hear from Those <em class="text-red-600 dark:text-red-400">Directly Affected</em></h2>
-                <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-lg">These aren't abstract policy debates. Real families are watching their neighborhood, their air quality, and their quality of life be destroyed — while the City does nothing.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-8">
-                <!-- CHRISTY'S VIDEO -->
-                <div class="scroll-reveal">
-                    <a href="https://www.youtube.com/watch?v=1rHNldjm8hM" target="_blank" rel="noopener" class="block relative rounded-2xl overflow-hidden shadow-xl aspect-video group cursor-pointer">
-                        <img src="https://img.youtube.com/vi/1rHNldjm8hM/maxresdefault.jpg" alt="Christy's testimony — click to watch on YouTube" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                            <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-                                <iconify-icon icon="lucide:play" width="36" class="text-white ml-1"></iconify-icon>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-3 left-3 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
-                            ▶ Watch on YouTube
-                        </div>
-                    </a>
-                    <div class="mt-4 bg-stone-100 dark:bg-stone-800/50 backdrop-blur-sm rounded-xl p-5 border border-stone-200 dark:border-stone-700/30">
-                        <iconify-icon icon="lucide:quote" width="24" class="text-red-500 mb-2"></iconify-icon>
-                        <p class="text-stone-700 dark:text-stone-300 leading-relaxed text-sm italic">"They cut down every tree. The noise, the dust, the traffic — it never stops. Our property values, our peace of mind, our entire way of life has been destroyed. And when we complained, no one listened. No one from the City even came to see what was happening to us."</p>
-                        <p class="text-stone-500 dark:text-stone-500 text-sm font-semibold mt-3">— Christy, Adjacent Resident</p>
-                    </div>
-                </div>
-
-                <!-- JOHN'S VIDEO -->
-                <div class="scroll-reveal">
-                    <div class="video-placeholder rounded-2xl aspect-video cursor-pointer group" onclick="playYouTubeVideo(this, 'KzgLnSSmeaQ')" style="background-image: url('https://img.youtube.com/vi/KzgLnSSmeaQ/maxresdefault.jpg'); background-size: cover; background-position: center;">
-                        <div class="video-overlay absolute inset-0 z-10 flex items-center justify-center bg-black/50 transition-opacity duration-300">
-                            <div class="relative z-10 text-center">
-                                <div class="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors">
-                                    <iconify-icon icon="lucide:play" width="36" class="text-white ml-1"></iconify-icon>
-                                </div>
-                                <p class="text-white font-semibold text-lg">John's Story</p>
-                                <p class="text-stone-300 text-sm mt-1">Adjacent neighbor — Parthenia & Louise</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4 bg-stone-100 dark:bg-stone-800/50 backdrop-blur-sm rounded-xl p-5 border border-stone-200 dark:border-stone-700/30">
-                        <iconify-icon icon="lucide:quote" width="24" class="text-red-500 mb-2"></iconify-icon>
-                        <p class="text-stone-700 dark:text-stone-300 leading-relaxed text-sm italic">"We've lived here for over 30 years. This was a horse community — our kids rode on these trails. Now we look at concrete boxes where beautiful oaks used to be. The developer signed papers saying they'd live here — but they don't. They just build and flip. It's profit over people, and the City is letting it happen."</p>
-                        <p class="text-stone-500 dark:text-stone-500 text-sm font-semibold mt-3">— John, Long-time Sherwood Forest Resident</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== ENCINO & PARTHENIA — THIS IS WHAT'S COMING ========== -->
-    <section class="py-24 bg-stone-950 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-12 scroll-reveal">
-                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-400 mb-4">One Block Away — Already Built</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-4">This Is What The <em class="text-red-400">Developer Already Built</em></h2>
-                <p class="text-stone-400 leading-relaxed text-lg">These photos are from Parthenia & Encino — just one block away — where the same developer completed a similar project. Dark, imposing, industrial-looking structures completely out of character with our neighborhood. Now imagine <strong class="text-white">up to 64 of these on the corner of Parthenia and Shoshone</strong> — where a beautiful family estate once stood.</p>
             </div>
 
             <!-- Photo Grid -->
@@ -638,14 +575,53 @@
             </div>
 
             <!-- Impact Statement -->
-            <div class="scroll-reveal bg-red-600/10 border-2 border-red-500/30 rounded-2xl p-8 text-center max-w-3xl mx-auto">
+            <div class="scroll-reveal bg-red-600/10 border-2 border-red-500/30 rounded-2xl p-8 text-center max-w-3xl mx-auto mb-16">
                 <p class="text-2xl font-serif font-bold text-white mb-3">Now imagine <span class="text-red-400">up to 64</span> of these structures</p>
                 <p class="text-stone-300 leading-relaxed">crammed onto the corner of Parthenia and Shoshone — where a stunning 2.5-acre estate with hundreds of mature trees, a tennis court, and a swimming pool once stood. All built without a single public hearing, without any traffic or safety study, and without one vote from the community that has to live next to them.</p>
             </div>
+
+            <!-- Neighbor Voices -->
+            <div class="text-center max-w-3xl mx-auto mb-12 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-400 mb-4">Neighbor Voices</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6 text-white">Hear from Those <em class="text-red-400">Directly Affected</em></h2>
+                <p class="text-stone-400 leading-relaxed text-lg">These neighbors live next to the Parthenia & Encino development — built by the same developer now planning up to 64 structures at Parthenia & Shoshone. Their experience is a preview of what's coming.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- CHRISTY'S VIDEO -->
+                <div class="scroll-reveal">
+                    <a href="https://www.youtube.com/watch?v=1rHNldjm8hM" target="_blank" rel="noopener" class="block relative rounded-2xl overflow-hidden shadow-xl aspect-video group cursor-pointer">
+                        <img src="https://img.youtube.com/vi/1rHNldjm8hM/maxresdefault.jpg" alt="Christy's testimony — click to watch on YouTube" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                            <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                                <iconify-icon icon="lucide:play" width="36" class="text-white ml-1"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-3 left-3 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                            ▶ Watch on YouTube
+                        </div>
+                    </a>
+                    <div class="mt-4 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                        <iconify-icon icon="lucide:quote" width="24" class="text-red-500 mb-2"></iconify-icon>
+                        <p class="text-stone-300 leading-relaxed text-sm italic">"They cut down every tree. The noise, the dust, the traffic — it never stops. Our property values, our peace of mind, our entire way of life has been destroyed. And when we complained, no one listened. No one from the City even came to see what was happening to us."</p>
+                        <p class="text-stone-500 text-sm font-semibold mt-3">— Christy, Adjacent Resident</p>
+                    </div>
+                </div>
+
+                <!-- JON'S VIDEO -->
+                <div class="scroll-reveal">
+                    <div class="rounded-2xl aspect-video overflow-hidden shadow-xl">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/KzgLnSSmeaQ" title="Jon — Sherwood Forest Neighbor Testimony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="mt-4 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                        <iconify-icon icon="lucide:quote" width="24" class="text-red-500 mb-2"></iconify-icon>
+                        <p class="text-stone-300 leading-relaxed text-sm italic">"We've lived here for over 30 years. This was a horse community — our kids rode on these trails. Now we look at concrete boxes where beautiful oaks used to be. The developer signed papers saying they'd live here — but they don't. They just build and flip. It's profit over people, and the City is letting it happen."</p>
+                        <p class="text-stone-500 text-sm font-semibold mt-3">— John, Long-time Sherwood Forest Resident</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- ========== KEY EVIDENCE & LEGAL TOOLS ========== -->
     <section class="py-16 bg-stone-50 dark:bg-stone-900">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-12 scroll-reveal">
