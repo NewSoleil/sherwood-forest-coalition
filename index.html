@@ -534,7 +534,10 @@
                 </div>
             </div>
         </div>
-    </section> class="fixed inset-0 z-[999] bg-black/95 hidden items-center justify-center p-4" onclick="closeLightbox()">
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[999] bg-black/95 hidden items-center justify-center p-4" onclick="closeLightbox()">
         <div class="relative max-w-5xl w-full" onclick="event.stopPropagation()">
             <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white/70 hover:text-white text-sm font-semibold flex items-center gap-2">
                 <iconify-icon icon="lucide:x" width="20"></iconify-icon> Close
@@ -543,8 +546,6 @@
             <p id="lightbox-caption" class="text-stone-300 text-sm mt-4 text-center leading-relaxed"></p>
         </div>
     </div>
-
-            </div>
 
             <!-- Photo Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 scroll-reveal">
@@ -687,93 +688,6 @@
         </div>
     </section>
 
-    <!-- ========== LEGISLATION ========== -->
-    <section id="legislation" class="py-24 bg-white dark:bg-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
-                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-500 mb-4">Sacramento's New Senate Housing Bills</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6">How State Laws Are <em class="text-red-600 dark:text-red-500">Destroying</em> Neighborhoods</h2>
-                <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-lg">Sacramento has passed a series of bills that strip local communities of zoning protections — all under the guise of "housing." The result? Developers exploit loopholes while neighborhoods like Sherwood Forest pay the price.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 gap-6 mb-12">
-                <!-- SB 684 - FIRST (most relevant) -->
-                <div class="scroll-reveal p-6 rounded-2xl border-2 border-red-200 dark:border-red-900/40 bg-red-50/50 dark:bg-red-950/20 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-24 h-24 bg-red-100 dark:bg-red-900/20 rounded-bl-full"></div>
-                    <div class="relative z-10">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">SB 684</span>
-                            <span class="text-xs font-semibold text-red-600 dark:text-red-400">DIRECTLY USED HERE</span>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Senate Bill 684 — 10-Unit Subdivisions</h3>
-                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Allows up to 10 residential units on parcels in "urban areas" with ministerial approval — no public hearing, no community input. This is one of the bills being used to push through the Shoshone & Parthenia development without any community review.</p>
-                        <ul class="space-y-1.5 text-sm text-stone-600 dark:text-stone-400">
-                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Ministerial approval — no public hearings required</li>
-                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Being used to avoid community planning oversight</li>
-                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>No environmental review required</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- SB 1123 - SECOND (most relevant) -->
-                <div class="scroll-reveal p-6 rounded-2xl border-2 border-red-200 dark:border-red-900/40 bg-red-50/30 dark:bg-red-950/10 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-24 h-24 bg-red-100 dark:bg-red-900/20 rounded-bl-full"></div>
-                    <div class="relative z-10">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">SB 1123</span>
-                            <span class="text-xs font-semibold text-red-600 dark:text-red-400">DIRECTLY USED HERE</span>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Senate Bill 1123 — Starter Home Revitalization Act</h3>
-                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Expands SB 684 by allowing condominium subdivisions on single-family lots — making it even easier for developers to build, subdivide, and sell with no regard for neighborhood character. Designed for genuinely vacant urban infill land, not established neighborhoods like ours.</p>
-                        <ul class="space-y-1.5 text-sm text-stone-600 dark:text-stone-400">
-                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Turns single-family lots into condo developments by right</li>
-                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>No environmental review required</li>
-                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Eliminates community input entirely</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- SB 9 -->
-                <div class="scroll-reveal p-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
-                    <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">SB 9</span>
-                    <h3 class="font-bold text-lg mt-3 mb-2">Senate Bill 9 — The Lot Split Loophole</h3>
-                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Allows developers to split single-family lots and build up to 4 units (plus ADUs) on land zoned for one home. <strong class="text-red-700 dark:text-red-400">Our developer signed owner-occupancy affidavits for multiple properties on the same street</strong> — a single person cannot legally occupy multiple primary residences simultaneously.</p>
-                    <ul class="space-y-1.5 text-sm text-stone-600 dark:text-stone-400">
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Requires "owner-occupancy" affidavit — developer signs multiple</li>
-                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Overrides local RA-1 and Equestrian zoning</li>
-                    </ul>
-                </div>
-                <!-- SB 1211 -->
-                <div class="scroll-reveal p-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
-                    <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">SB 1211</span>
-                    <h3 class="font-bold text-lg mt-3 mb-2">Senate Bill 1211 — ADU Expansion</h3>
-                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Allows up to 8 ADUs on multifamily properties. Developers use SB 9 to first create "multifamily" parcels, then stack ADUs on top — multiplying the density far beyond what any single bill intended.</p>
-                    <p class="text-stone-500 text-xs italic">The City argues SB 1211 eliminates local control over ADU size limits on SB 9 parcels. Our legal counsel disagrees.</p>
-                </div>
-            </div>
-
-            <!-- Zoning Callout -->
-            <div class="scroll-reveal bg-stone-50 dark:bg-stone-900/50 border-2 border-stone-200 dark:border-stone-800 rounded-2xl p-8">
-                <div class="flex flex-col md:flex-row items-start gap-6">
-                    <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shrink-0">
-                        <iconify-icon icon="lucide:shield-alert" width="32" class="text-white"></iconify-icon>
-                    </div>
-                    <div>
-                        <h3 class="font-serif text-xl font-bold mb-3">Zoning Laws Bypassed & Ignored</h3>
-                        <div class="grid sm:grid-cols-2 gap-4">
-                            <div class="bg-white dark:bg-black rounded-xl p-4 border border-stone-200 dark:border-stone-800">
-                                <p class="text-sm font-bold text-black dark:text-white mb-1">RA-1 Low Residential Zoning</p>
-                                <p class="text-xs text-stone-600 dark:text-stone-400">Designed to protect single-family neighborhoods with large lots and semi-rural character. Completely overridden by SB 9 ministerial approvals.</p>
-                            </div>
-                            <div class="bg-white dark:bg-black rounded-xl p-4 border border-stone-200 dark:border-stone-800">
-                                <p class="text-sm font-bold text-black dark:text-white mb-1">ZI-248 Equestrian Provisions</p>
-                                <p class="text-xs text-stone-600 dark:text-stone-400">Protects equine uses including open area, setbacks, grading, drainage, and access. State housing laws do NOT preempt these objective standards — yet these provisions have not been adequately addressed in the current approval process.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ========== LEGAL STRATEGY / VIOLATIONS ========== -->
     <section id="legal" class="py-16 bg-stone-950 text-white">
         <div class="max-w-7xl mx-auto px-6">
@@ -893,6 +807,93 @@
                     <div class="bg-white/5 rounded-xl p-3 border border-white/10 text-sm text-stone-300 flex items-start gap-2">
                         <iconify-icon icon="lucide:circle-dot" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>
                         Has Subdivision Map Act compliance been fully verified?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LEGISLATION ========== -->
+    <section id="legislation" class="py-24 bg-white dark:bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-500 mb-4">Sacramento's New Senate Housing Bills</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6">How State Laws Are <em class="text-red-600 dark:text-red-500">Destroying</em> Neighborhoods</h2>
+                <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-lg">Sacramento has passed a series of bills that strip local communities of zoning protections — all under the guise of "housing." The result? Developers exploit loopholes while neighborhoods like Sherwood Forest pay the price.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6 mb-12">
+                <!-- SB 684 - FIRST (most relevant) -->
+                <div class="scroll-reveal p-6 rounded-2xl border-2 border-red-200 dark:border-red-900/40 bg-red-50/50 dark:bg-red-950/20 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-red-100 dark:bg-red-900/20 rounded-bl-full"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">SB 684</span>
+                            <span class="text-xs font-semibold text-red-600 dark:text-red-400">DIRECTLY USED HERE</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Senate Bill 684 — 10-Unit Subdivisions</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Allows up to 10 residential units on parcels in "urban areas" with ministerial approval — no public hearing, no community input. This is one of the bills being used to push through the Shoshone & Parthenia development without any community review.</p>
+                        <ul class="space-y-1.5 text-sm text-stone-600 dark:text-stone-400">
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Ministerial approval — no public hearings required</li>
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Being used to avoid community planning oversight</li>
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>No environmental review required</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- SB 1123 - SECOND (most relevant) -->
+                <div class="scroll-reveal p-6 rounded-2xl border-2 border-red-200 dark:border-red-900/40 bg-red-50/30 dark:bg-red-950/10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-red-100 dark:bg-red-900/20 rounded-bl-full"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">SB 1123</span>
+                            <span class="text-xs font-semibold text-red-600 dark:text-red-400">DIRECTLY USED HERE</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Senate Bill 1123 — Starter Home Revitalization Act</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Expands SB 684 by allowing condominium subdivisions on single-family lots — making it even easier for developers to build, subdivide, and sell with no regard for neighborhood character. Designed for genuinely vacant urban infill land, not established neighborhoods like ours.</p>
+                        <ul class="space-y-1.5 text-sm text-stone-600 dark:text-stone-400">
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Turns single-family lots into condo developments by right</li>
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>No environmental review required</li>
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Eliminates community input entirely</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- SB 9 -->
+                <div class="scroll-reveal p-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
+                    <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">SB 9</span>
+                    <h3 class="font-bold text-lg mt-3 mb-2">Senate Bill 9 — The Lot Split Loophole</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Allows developers to split single-family lots and build up to 4 units (plus ADUs) on land zoned for one home. <strong class="text-red-700 dark:text-red-400">Our developer signed owner-occupancy affidavits for multiple properties on the same street</strong> — a single person cannot legally occupy multiple primary residences simultaneously.</p>
+                    <ul class="space-y-1.5 text-sm text-stone-600 dark:text-stone-400">
+                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Requires "owner-occupancy" affidavit — developer signs multiple</li>
+                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Overrides local RA-1 and Equestrian zoning</li>
+                    </ul>
+                </div>
+                <!-- SB 1211 -->
+                <div class="scroll-reveal p-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
+                    <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">SB 1211</span>
+                    <h3 class="font-bold text-lg mt-3 mb-2">Senate Bill 1211 — ADU Expansion</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Allows up to 8 ADUs on multifamily properties. Developers use SB 9 to first create "multifamily" parcels, then stack ADUs on top — multiplying the density far beyond what any single bill intended.</p>
+                    <p class="text-stone-500 text-xs italic">The City argues SB 1211 eliminates local control over ADU size limits on SB 9 parcels. Our legal counsel disagrees.</p>
+                </div>
+            </div>
+
+            <!-- Zoning Callout -->
+            <div class="scroll-reveal bg-stone-50 dark:bg-stone-900/50 border-2 border-stone-200 dark:border-stone-800 rounded-2xl p-8">
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shrink-0">
+                        <iconify-icon icon="lucide:shield-alert" width="32" class="text-white"></iconify-icon>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl font-bold mb-3">Zoning Laws Bypassed & Ignored</h3>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="bg-white dark:bg-black rounded-xl p-4 border border-stone-200 dark:border-stone-800">
+                                <p class="text-sm font-bold text-black dark:text-white mb-1">RA-1 Low Residential Zoning</p>
+                                <p class="text-xs text-stone-600 dark:text-stone-400">Designed to protect single-family neighborhoods with large lots and semi-rural character. Completely overridden by SB 9 ministerial approvals.</p>
+                            </div>
+                            <div class="bg-white dark:bg-black rounded-xl p-4 border border-stone-200 dark:border-stone-800">
+                                <p class="text-sm font-bold text-black dark:text-white mb-1">ZI-248 Equestrian Provisions</p>
+                                <p class="text-xs text-stone-600 dark:text-stone-400">Protects equine uses including open area, setbacks, grading, drainage, and access. State housing laws do NOT preempt these objective standards — yet these provisions have not been adequately addressed in the current approval process.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
