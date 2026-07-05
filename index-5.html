@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherwood Forest | Protect Our Neighborhood 91325</title>
+    <meta name="description" content="Developers are demolishing Sherwood Forest in Northridge, CA — cutting hundreds of trees to build 40 confirmed units across two lots — with more planned. Join the fight to protect our neighborhood.">
+    <meta property="og:title" content="Protect Our Neighborhood — Sherwood Forest 91325">
+    <meta property="og:description" content="Developers demolished a beautiful 2.5-acre estate and plan to build 40+ units using state law loopholes — with remainder parcels for future development. No public hearing. No community input. Join us.">
+    <meta property="og:image" content="before_aerial_2.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="before_aerial_2.png">
+    <meta name="twitter:title" content="Protect Our Neighborhood — Sherwood Forest 91325">
+    <meta name="twitter:description" content="Developers demolished a beautiful 2.5-acre estate and plan to build 40+ units using state law loopholes — with remainder parcels for future development. Join the fight.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background: #dc2626; color: #fff; }
+
+        @keyframes pulse-urgent {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .animate-pulse-urgent { animation: pulse-urgent 1.5s ease-in-out infinite; }
+
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide-up { animation: slide-up 0.8s ease-out forwards; }
+
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in { animation: fade-in 1s ease-out forwards; }
+
+        .toast {
+            position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
+            padding: 1rem 1.5rem; border-radius: 0.75rem;
+            transform: translateY(120%); opacity: 0;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .toast.show { transform: translateY(0); opacity: 1; }
+
+        .timeline-line {
+            position: absolute; left: 1.25rem; top: 2.5rem; bottom: 0;
+            width: 2px; background: linear-gradient(to bottom, #dc2626, #d6d3d1);
+        }
+        .dark .timeline-line { background: linear-gradient(to bottom, #dc2626, #57534e); }
+
+        .video-placeholder {
+            position: relative;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .marquee {
+            animation: marquee 25s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .email-btn-glow {
+            box-shadow: 0 0 20px rgba(220,38,38,0.3), 0 0 40px rgba(220,38,38,0.15);
+        }
+        .email-btn-glow:hover {
+            box-shadow: 0 0 30px rgba(220,38,38,0.5), 0 0 60px rgba(220,38,38,0.25);
+        }
+
+        .scroll-reveal {
+            opacity: 0; transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.visible {
+            opacity: 1; transform: translateY(0);
+        }
+
+        /* Enhanced nature-inspired hero background */
+        .hero-stripe {
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(34, 197, 94, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(220, 38, 38, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(120, 113, 108, 0.03) 0%, transparent 70%),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(0,0,0,0.008) 40px,
+                    rgba(0,0,0,0.008) 41px
+                );
+        }
+        .dark .hero-stripe {
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(34, 197, 94, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(220, 38, 38, 0.07) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.02) 0%, transparent 70%),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(255,255,255,0.012) 40px,
+                    rgba(255,255,255,0.012) 41px
+                );
+        }
+
+        .divider-label {
+            position: relative;
+        }
+        .divider-label::before,
+        .divider-label::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: calc(50% - 40px);
+            height: 1px;
+            background: #d6d3d1;
+        }
+        .dark .divider-label::before,
+        .dark .divider-label::after {
+            background: #44403c;
+        }
+        .divider-label::before { left: 0; }
+        .divider-label::after { right: 0; }
+    </style>
+</head>
+<body class="font-sans bg-white text-stone-900 dark:bg-black dark:text-stone-100 transition-colors duration-300">
+
+    <!-- Toast -->
+    <div id="toast" class="toast bg-red-600 text-white font-medium shadow-xl">
+        <div class="flex items-center gap-2">
+            <iconify-icon icon="lucide:check-circle" width="20"></iconify-icon>
+            <span id="toast-message">Success!</span>
+        </div>
+    </div>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/95 dark:bg-black/95 backdrop-blur-md border-b border-stone-200 dark:border-stone-800">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <iconify-icon icon="lucide:trees" width="28" class="text-red-600 dark:text-red-500 group-hover:rotate-12 transition-transform duration-300"></iconify-icon>
+                <div class="leading-tight">
+                    <span class="font-serif font-bold text-lg text-black dark:text-white block">Sherwood Forest</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-red-600 dark:text-red-500">91325</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#crisis" class="text-stone-600 dark:text-stone-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">The Crisis</a>
+                <a href="#evidence" class="text-stone-600 dark:text-stone-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">Evidence</a>
+                <a href="#voices" class="text-stone-600 dark:text-stone-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">Voices</a>
+                <a href="#legislation" class="text-stone-600 dark:text-stone-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">Legislation</a>
+                <a href="#legal" class="text-stone-600 dark:text-stone-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">Legal Strategy</a>
+                <a href="#act" class="text-stone-600 dark:text-stone-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">Take Action</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle dark mode">
+                    <iconify-icon icon="lucide:moon" width="20" class="dark:hidden text-stone-600"></iconify-icon>
+                    <iconify-icon icon="lucide:sun" width="20" class="hidden dark:inline text-red-400"></iconify-icon>
+                </button>
+                <a href="mailto:sherwoodforest91325@proton.me" class="hidden sm:inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors">
+                    <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                    Email Us
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+                    <iconify-icon icon="lucide:menu" width="22" class="text-stone-700 dark:text-stone-300"></iconify-icon>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 px-6 py-4">
+            <div class="flex flex-col gap-3 text-base font-medium">
+                <a href="#crisis" class="py-2 text-stone-600 dark:text-stone-400 hover:text-red-600">The Crisis</a>
+                <a href="#evidence" class="py-2 text-stone-600 dark:text-stone-400 hover:text-red-600">Evidence</a>
+                <a href="#voices" class="py-2 text-stone-600 dark:text-stone-400 hover:text-red-600">Voices</a>
+                <a href="#legislation" class="py-2 text-stone-600 dark:text-stone-400 hover:text-red-600">Legislation</a>
+                <a href="#legal" class="py-2 text-stone-600 dark:text-stone-400 hover:text-red-600">Legal Strategy</a>
+                <a href="#act" class="py-2 text-red-600 font-semibold">Take Action →</a>
+                <a href="mailto:sherwoodforest91325@proton.me" class="py-2 text-red-600 font-semibold flex items-center gap-2">
+                    <iconify-icon icon="lucide:mail" width="16"></iconify-icon> sherwoodforest91325@proton.me
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO — SPLIT BEFORE/AFTER ========== -->
+    <section class="relative min-h-screen flex items-center bg-white dark:bg-black hero-stripe pt-16">
+        <div class="max-w-7xl mx-auto px-6 py-20 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Left: Text -->
+                <div class="order-2 lg:order-1">
+                    <div class="animate-slide-up">
+                        <div class="inline-flex items-center gap-2 border-2 border-red-600 text-red-600 dark:text-red-400 dark:border-red-500 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+                            <iconify-icon icon="lucide:shield-alert" width="14"></iconify-icon>
+                            Protect Our Neighborhood
+                        </div>
+
+                        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-black dark:text-white leading-[1.05] tracking-tight mb-6">
+                            Our Neighborhood Is Being <span class="text-red-600 dark:text-red-500">Destroyed</span>
+                        </h1>
+                        <div class="bg-red-50 dark:bg-red-950/30 border-l-4 border-red-600 rounded-r-xl p-4 my-4">
+                            <p class="text-stone-700 dark:text-stone-300 text-sm leading-relaxed italic"><strong class="text-red-600 dark:text-red-400">This is not only Sherwood Forest's fight.</strong> What is happening here is happening in neighborhoods across Los Angeles — and beyond. When state housing laws eliminate community voice, every established neighborhood becomes vulnerable. If we don't stand up here, your street could be next.</p>
+                        </div>
+
+                        <p class="text-lg sm:text-xl text-stone-600 dark:text-stone-400 leading-relaxed mb-8 max-w-xl">
+                            Developers are using Sacramento's new Senate Housing Bills in ways that are changing Sherwood Forest — cutting down hundreds of trees, ignoring RA-1 and Equestrian zoning, and planning a confirmed <strong class="text-black dark:text-white">40+ dwelling units across two lots — with remainder parcels marked for future development</strong>. A group of concerned neighbors have been working with legislators — but this fight is bigger than one street, one neighborhood, or one city. <strong class="text-black dark:text-white">What is happening here is happening across Los Angeles — and it could be coming to your street next.</strong>
+                        </p>
+
+                        <!-- CTA -->
+                        <div class="bg-red-600 rounded-2xl p-6 text-white">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="w-2 h-2 bg-white rounded-full animate-pulse-urgent"></span>
+                                <p class="text-sm font-bold uppercase tracking-wider">Get Involved — Email Us</p>
+                            </div>
+                            <p class="text-red-100 text-sm mb-4">We held a very informative Zoom meeting on May 20th with concerned neighbors who shared great ideas we will soon implement. Stay involved — email us:</p>
+                            <a href="mailto:sherwoodforest91325@proton.me" class="inline-flex items-center gap-3 bg-white text-red-600 text-sm font-bold px-6 py-3 rounded-full transition-all hover:bg-stone-100 email-btn-glow w-full justify-center text-center">
+                                <iconify-icon icon="lucide:mail" width="18" class="shrink-0"></iconify-icon>
+                                <span>sherwoodforest91325<wbr>@proton.me</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Stacked Before/After Photos - shows first on mobile -->
+                <div class="order-1 lg:order-2 animate-fade-in">
+                    <div class="flex flex-col gap-3">
+                        <!-- BEFORE -->
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                            <img src="before_aerial_1.png" alt="Sherwood Forest before — aerial with palm trees" class="w-full h-48 lg:h-[38vh] object-cover">
+                            <div class="absolute top-3 left-3 bg-black text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                                Before
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                <p class="text-white text-xs font-semibold">Our neighborhood — tree-lined, open, irreplaceable</p>
+                            </div>
+                        </div>
+                        <!-- AFTER -->
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl">
+                            <img src="after_demolition_1.png" alt="After demolition — bare earth Feb 25 2026" class="w-full h-48 lg:h-[38vh] object-cover">
+                            <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                                After — Feb 25, 2026
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-red-900/80 to-transparent p-4">
+                                <p class="text-white text-xs font-semibold">Demolished — 40 confirmed units + remainder parcels for future development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <iconify-icon icon="lucide:chevron-down" width="28" class="text-stone-400"></iconify-icon>
+        </div>
+    </section>
+
+    <!-- ========== URGENCY BANNER ========== -->
+    <div class="bg-red-600 text-white py-2 overflow-hidden">
+        <div class="overflow-hidden">
+            <div class="marquee whitespace-nowrap flex items-center justify-center sm:justify-start">
+                <span class="inline-block mx-8 text-sm font-semibold tracking-wide">⚠️ BOE SAID "NOT BE APPROVED" — PERMITS ADVANCED ANYWAY ⚠️</span>
+                <span class="inline-block mx-8 text-sm font-semibold tracking-wide">🔴 DEVELOPER ADMITTED MAXIMIZING TO LEGAL LIMIT IN WRITING 🔴</span>
+                <span class="inline-block mx-8 text-sm font-semibold tracking-wide">📋 FORMAL COMPLAINTS FILED — LADBS · ETHICS · CONTROLLER 📋</span>
+                <span class="inline-block mx-8 text-sm font-semibold tracking-wide">📅 JULY 12 COMMENT DEADLINE — MAKE YOUR VOICE HEARD 📅</span>
+                <span class="inline-block mx-8 text-sm font-semibold tracking-wide">⚠️ BOE SAID "NOT BE APPROVED" — PERMITS ADVANCED ANYWAY ⚠️</span>
+                <span class="inline-block mx-8 text-sm font-semibold tracking-wide">🔴 DEVELOPER ADMITTED MAXIMIZING TO LEGAL LIMIT IN WRITING 🔴</span>
+                <span class="inline-block mx-8 text-sm font-semibold tracking-wide">📋 FORMAL COMPLAINTS FILED — LADBS · ETHICS · CONTROLLER 📋</span>
+                <span class="inline-block mx-8 text-sm font-semibold tracking-wide">📅 JULY 12 COMMENT DEADLINE — MAKE YOUR VOICE HEARD 📅</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========== NEW FINDINGS — WHAT WE HAVE UNCOVERED ========== -->
+    <section id="findings" class="py-20 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-14 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-400 mb-4">From The City's Own Files</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-4">What We Have <em class="text-red-400">Uncovered</em></h2>
+                <p class="text-stone-400 leading-relaxed">Through a California Public Records Act request, we obtained the City's own internal documents. What they reveal is extraordinary — and it all comes from the government's own files.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+                <!-- Finding 1 - BOE -->
+                <div class="scroll-reveal bg-red-950/30 border-2 border-red-600/60 rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:x-octagon" width="20" class="text-white"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-red-400">Bureau of Engineering — May 28, 2026</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-white mb-3">The City's Own Engineer Said: "Not Be Approved"</h3>
+                    <p class="text-stone-300 text-sm leading-relaxed mb-4">In an official interdepartmental memorandum, BOE Principal Civil Engineer Hui M. Huang formally recommended that VTT-85030-SH-HCA <strong class="text-red-300">"not be approved as filed"</strong> — citing landlocked lots, missing easement documentation, and incorrect parcel designation. Building permits advanced through plan check anyway. No written explanation of who overruled this recommendation has ever been provided.</p>
+                    <div class="bg-red-900/30 rounded-xl p-3 border border-red-700/40">
+                        <p class="text-red-300 text-xs font-semibold">This document was produced by the City in response to our Public Records Act request.</p>
+                    </div>
+                </div>
+
+                <!-- Finding 2 - Mandelbaum email -->
+                <div class="scroll-reveal bg-amber-950/30 border-2 border-amber-600/60 rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-amber-600 rounded-xl flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:mail" width="20" class="text-white"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Developer's Own Email — May 27, 2026</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-white mb-3">Developer Admitted Maximizing to the Legal Limit</h3>
+                    <p class="text-stone-300 text-sm leading-relaxed mb-4">In an email to City Planner Renata Ooms, developer Lior Mandelbaum wrote: <em class="text-amber-300">"Because I cannot utilize the remainder lot for another SB1123 or SB 9 and the maximum that I can have is 10 lots — that's why I am revising the map."</em> The City's own Housing Policy staff called this <strong class="text-white">"the first project to file in LA that includes remainder parcels."</strong></p>
+                    <div class="bg-amber-900/30 rounded-xl p-3 border border-amber-700/40">
+                        <p class="text-amber-300 text-xs font-semibold">An unprecedented exploitation of state law — confirmed by the developer himself.</p>
+                    </div>
+                </div>
+
+                <!-- Finding 3 - Revised Plans -->
+                <div class="scroll-reveal bg-stone-800 border-2 border-stone-600 rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-stone-600 rounded-xl flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:layers" width="20" class="text-white"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-stone-400">Revised Plans — May 28, 2026</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-white mb-3">Revised Plans Reveal: "Parthenia Villas 2 &amp; 3"</h3>
+                    <p class="text-stone-300 text-sm leading-relaxed mb-4">The revised plans — submitted the same day as the BOE rejection — reveal the project has a marketing name: <strong class="text-white">Parthenia Villas 2</strong> (VTT-85031) and <strong class="text-white">Parthenia Villas 3</strong> (VTT-85030). A numbered series implies a Parthenia Villas 1 already exists. Each application now shows 10 units + 1 remainder parcel = <strong class="text-white">40 confirmed dwelling units</strong> across both parcels, with remainder parcels left for future development.</p>
+                    <div class="grid grid-cols-2 gap-3 mt-3">
+                        <div class="bg-stone-700 rounded-lg p-3 text-center">
+                            <p class="text-2xl font-bold text-white">10</p>
+                            <p class="text-xs text-stone-400">Units + ADU per parcel</p>
+                        </div>
+                        <div class="bg-stone-700 rounded-lg p-3 text-center">
+                            <p class="text-2xl font-bold text-red-400">40+</p>
+                            <p class="text-xs text-stone-400">Confirmed dwelling units</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finding 4 - Rosales -->
+                <div class="scroll-reveal bg-stone-800 border-2 border-stone-600 rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-stone-500 rounded-xl flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:user-x" width="20" class="text-white"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-stone-400">Internal Email — June 11, 2026</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-white mb-3">CD12 Privately Coordinated With Assigned Planner</h3>
+                    <p class="text-stone-300 text-sm leading-relaxed mb-4">A Public Records Act document shows CD12 Planning Director Dan Rosales privately emailing assigned City Planner Renata Ooms — while presenting himself to residents as a neutral resource. In that official email, Mr. Rosales referred to Sherwood Forest residents including attorneys as <em class="text-stone-300">"retirees with too much time on their hands."</em> He simultaneously requested project files through a back channel.</p>
+                    <div class="bg-stone-700 rounded-xl p-3 border border-stone-600">
+                        <p class="text-stone-300 text-xs font-semibold">A formal Ethics Commission complaint has been filed regarding this conduct.</p>
+                    </div>
+                </div>
+
+                <!-- Finding 5 - Not Vacant -->
+                <div class="scroll-reveal bg-green-950/30 border-2 border-green-700/60 rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-green-700 rounded-xl flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:home" width="20" class="text-white"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-green-400">Neighbor Testimony + MLS Records</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-white mb-3">This Property Was NOT Vacant — The Owner's Widow Was Living There</h3>
+                    <p class="text-stone-300 text-sm leading-relaxed mb-4">Under SB 1123, "vacant" means "having no permanent structure, unless the permanent structure is abandoned and uninhabitable." This property had a permanent structure that was actively occupied by the owner's widow throughout the nearly 3-year listing period (March 2023 to January 2026) — confirmed by neighboring residents. MLS listing photographs show a fully furnished residence. The property went into escrow September 30, 2025 — the demolition permit was filed October 9, 2025 — while the widow may still have been in residence. The "currently vacant" declaration on both SHRA applications is inaccurate under the statutory definition.</p>
+                    <div class="bg-green-900/30 rounded-xl p-3 border border-green-700/40">
+                        <p class="text-green-300 text-xs font-semibold">MLS price history, listing photographs, and neighbor testimony all confirm active occupancy.</p>
+                    </div>
+                </div>
+
+                <!-- Finding 6 - CEQA False Certification -->
+                <div class="scroll-reveal bg-red-950/30 border-2 border-red-600/60 rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-red-700 rounded-xl flex items-center justify-center shrink-0">
+                            <iconify-icon icon="lucide:file-warning" width="20" class="text-white"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-red-400">Demolition Permit — October 9, 2025</span>
+                    </div>
+                    <h3 class="font-bold text-xl text-white mb-3">The Demolition Permit CEQA Certification May Be False</h3>
+                    <p class="text-stone-300 text-sm leading-relaxed mb-4">A neighbor with real estate development expertise has identified a critical concern. MLS records confirm the property went into escrow September 30, 2025. The demolition permit was filed October 9, 2025 — while in escrow. Mandelbaum had already formed both development LLCs on September 24, 2025 — 15 days before the demolition permit — and civil engineering work was underway since August 2025. The demolition permit requires a CEQA certification declaring the demolition is NOT part of a larger project. Given the pre-existing LLC formation and engineering work, that certification may constitute a false declaration on a city permit application.</p>
+                    <div class="grid grid-cols-3 gap-2 text-center mt-3">
+                        <div class="bg-red-900/30 rounded-lg p-2 border border-red-700/40">
+                            <p class="text-white text-xs font-bold">Aug 2025</p>
+                            <p class="text-red-300 text-xs">Engineering begins</p>
+                        </div>
+                        <div class="bg-red-900/30 rounded-lg p-2 border border-red-700/40">
+                            <p class="text-white text-xs font-bold">Sep 24, 2025</p>
+                            <p class="text-red-300 text-xs">LLCs formed</p>
+                        </div>
+                        <div class="bg-red-900/30 rounded-lg p-2 border border-red-700/40">
+                            <p class="text-white text-xs font-bold">Oct 9, 2025</p>
+                            <p class="text-red-300 text-xs">Demo permit filed</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Combined acreage callout -->
+            <div class="scroll-reveal bg-red-600 rounded-2xl p-6 text-center">
+                <h3 class="font-bold text-2xl text-white mb-2">Combined Acreage: 2.34 Acres — 56% Over the SB 684 Limit</h3>
+                <p class="text-red-100 text-sm leading-relaxed max-w-3xl mx-auto">VTT-85031 (1.19 acres) + VTT-85030 (1.15 acres) = 2.34 acres total — confirmed by the developer's own application forms. Under SB 684, the limit for single-family zoned vacant land is 1.5 acres. Evaluated together as one project — which California's anti-piecemealing doctrine requires — this project exceeds the legal limit by 56%. No aggregation analysis has been conducted.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== THE CRISIS ========== -->
+    <section id="crisis" class="py-24 bg-stone-50 dark:bg-stone-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-500 mb-4">The Crisis</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6">What's Happening to <em class="text-red-600 dark:text-red-500">Sherwood Forest</em></h2>
+                <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-lg">Developers are systematically changing our neighborhood — one lot at a time. Using Sacramento's new housing bills, they're replacing single-family homes with dense large-scale developments while City processes continue without public review or community input.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-0">
+
+                <!-- 12-year cycle -->
+                <div class="relative pl-14 pb-10 scroll-reveal">
+                    <div class="timeline-line"></div>
+                    <div class="absolute left-0 top-0 w-10 h-10 bg-green-700 dark:bg-green-600 rounded-full flex items-center justify-center shadow-lg">
+                        <iconify-icon icon="lucide:trophy" width="18" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">2013 — Same Property. Community Fought Back. And Won.</h3>
+                    <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-3">Approximately 12 years ago, the same 2.5-acre property at Parthenia and Shoshone was targeted for a large-scale elder care facility. Our community organized, our HOA engaged, and residents showed up. The project was stopped. The neighborhood was protected. The property remained a beautiful family estate.</p>
+                    <div class="bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900/30 rounded-xl p-4">
+                        <p class="text-green-800 dark:text-green-400 text-sm font-bold mb-1">✅ We stopped it before — but the rules have changed.</p>
+                        <p class="text-green-700 dark:text-green-500 text-sm leading-relaxed">In 2013 there was a public hearing process. Neighbors could speak. Officials had to listen. Today, under Sacramento's new housing bills, that same community review process has been eliminated entirely. The developer does not need a public hearing. There is no vote. There is no community input. <strong class="text-green-900 dark:text-green-300">That is what has changed — and that is what we are fighting to restore.</strong></p>
+                    </div>
+                </div>
+
+                <div class="relative pl-14 pb-10 scroll-reveal">
+                    <div class="timeline-line"></div>
+                    <div class="absolute left-0 top-0 w-10 h-10 bg-stone-800 dark:bg-stone-700 rounded-full flex items-center justify-center shadow-lg">
+                        <iconify-icon icon="lucide:home" width="18" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Sherwood Forest — Why We Call It Home</h3>
+                    <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Sherwood Forest in Northridge (91325) is a rare gem — one of the last semi-rural, tree-lined communities within the City of Los Angeles. Large lots, mature trees, horse trails, and a peaceful quality of life that is simply irreplaceable. Many of us chose to make Sherwood Forest our home precisely because of these qualities — the open space, the equestrian character, the sense of community, and the tranquility that is increasingly hard to find in a major city. It is worth fighting for.</p>
+                </div>
+                <div class="relative pl-14 pb-10 scroll-reveal">
+                    <div class="timeline-line"></div>
+                    <div class="absolute left-0 top-0 w-10 h-10 bg-amber-600 dark:bg-amber-500 rounded-full flex items-center justify-center shadow-lg">
+                        <iconify-icon icon="lucide:hard-hat" width="18" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Developers Arrive — Parthenia & Encino, White Oak, Louise and More</h3>
+                    <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-3">It started with one developer at Parthenia and Encino, building multi-unit structures completely out of character with the neighborhood's scale, zoning, and equestrian heritage. That same developer then purchased the 2.5-acre estate at Parthenia and Shoshone — and the same pattern began again, this time on a much larger scale. Word spreads fast in the development community — where one succeeds, others follow. White Oak & Parthenia and Louise & Parthenia are already underway. There are other large lots throughout Sherwood Forest that could attract the same attention.</p>
+                    <div class="bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900/30 rounded-xl p-4">
+                        <p class="text-red-700 dark:text-red-400 text-sm font-bold mb-1">⚠️ If we don't stop this now:</p>
+                        <p class="text-red-600 dark:text-red-400 text-sm">Every large lot in Sherwood Forest becomes a target. Every mature tree becomes a liability in a developer's eyes. Every quiet street becomes a potential construction zone — with no public hearing, no community vote, and no way to stop it once the permits are filed.</p>
+                    </div>
+                </div>
+                <div class="relative pl-14 pb-10 scroll-reveal">
+                    <div class="timeline-line"></div>
+                    <div class="absolute left-0 top-0 w-10 h-10 bg-red-600 dark:bg-red-500 rounded-full flex items-center justify-center shadow-lg">
+                        <iconify-icon icon="lucide:alert-octagon" width="18" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Now: Parthenia & Shoshone — 40 Confirmed Units + Future Development Parcels</h3>
+                    <p class="text-stone-600 dark:text-stone-400 leading-relaxed">That 2.5-acre estate — once a thriving family home with hundreds of mature trees, a swimming pool, and a tennis court — was demolished. The lot is now being divided and permits filed to build <strong>10 two-story buildings per lot — each with an attached Junior ADU</strong>. That's potentially <strong class="text-red-600 dark:text-red-400">40 confirmed dwelling units (20 per parcel) with remainder parcels marked for future development</strong>. The permitting process has already started — with zero public hearings.</p>
+                </div>
+                <div class="relative pl-14 pb-10 scroll-reveal">
+                    <div class="timeline-line"></div>
+                    <div class="absolute left-0 top-0 w-10 h-10 bg-red-800 dark:bg-red-900 rounded-full flex items-center justify-center shadow-lg">
+                        <iconify-icon icon="lucide:hard-hat" width="18" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">The Spread — It's Not Just Shoshone</h3>
+                    <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-3">The same pattern is repeating across Parthenia Street. Multiple projects are either completed or underway — all by developers using the same state housing laws.</p>
+                    <div class="grid sm:grid-cols-2 gap-3">
+                        <div class="bg-stone-100 dark:bg-stone-800 rounded-xl p-3">
+                            <p class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">✅ Completed</p>
+                            <ul class="space-y-1 text-sm text-stone-600 dark:text-stone-400">
+                                <li class="flex items-center gap-2"><iconify-icon icon="lucide:circle-dot" width="12" class="text-stone-400"></iconify-icon>Encino & Parthenia</li>
+                                <li class="flex items-center gap-2"><iconify-icon icon="lucide:circle-dot" width="12" class="text-stone-400"></iconify-icon>Parthenia East of Encino</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-3 border border-red-200 dark:border-red-900/40">
+                            <p class="text-xs font-bold text-red-600 uppercase tracking-wider mb-2">⚠️ Ongoing / Upcoming</p>
+                            <ul class="space-y-1 text-sm text-stone-600 dark:text-stone-400">
+                                <li class="flex items-center gap-2"><iconify-icon icon="lucide:alert-circle" width="12" class="text-red-500"></iconify-icon>Shoshone & Parthenia</li>
+                                <li class="flex items-center gap-2"><iconify-icon icon="lucide:alert-circle" width="12" class="text-red-500"></iconify-icon>White Oak & Parthenia</li>
+                                <li class="flex items-center gap-2"><iconify-icon icon="lucide:alert-circle" width="12" class="text-red-500"></iconify-icon>Louise & Parthenia</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-sm text-red-600 dark:text-red-400 font-bold mt-3">Will YOUR street be next?</p>
+                </div>
+                <div class="relative pl-14 pb-10 scroll-reveal">
+                    <div class="timeline-line"></div>
+                    <div class="absolute left-0 top-0 w-10 h-10 bg-red-600 dark:bg-red-500 rounded-full flex items-center justify-center shadow-lg">
+                        <iconify-icon icon="lucide:mail-x" width="18" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">City Officials Are Pointing to Senate Housing Bills</h3>
+                    <p class="text-stone-600 dark:text-stone-400 leading-relaxed">We have reached out to Councilman John Lee, the LA Department of Planning, the City Attorney's office, and other departments. Some officials acknowledge the problem and have made efforts to amend the Senate Housing Bills — but legislative reform takes time, and our neighborhood cannot wait. Meanwhile, our zoning protections — RA-1 Low Residential and ZI-248 Equestrian Provisions — have not been adequately addressed under the current approval process.</p>
+                </div>
+                <div class="relative pl-14 scroll-reveal">
+                    <div class="absolute left-0 top-0 w-10 h-10 bg-red-600 dark:bg-red-500 rounded-full flex items-center justify-center shadow-lg">
+                        <iconify-icon icon="lucide:megaphone" width="18" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">We're Fighting Back — And We Need Your Help</h3>
+                    <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-3">The fight continues — <strong class="text-black dark:text-white">every email AND phone call to our representatives makes a difference.</strong> For a sample letter to send to your officials, <a href="#act" class="text-red-600 dark:text-red-400 font-bold hover:underline">scroll to the bottom of this page</a>. Email us to find out more:</p>
+                    <a href="mailto:sherwoodforest91325@proton.me" class="inline-flex items-center gap-2 text-red-600 dark:text-red-400 font-bold hover:underline text-sm">
+                        <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                        sherwoodforest91325@proton.me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EVIDENCE ========== -->
+    <section id="evidence" class="py-24 bg-white dark:bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-500 mb-4">The Evidence</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6">See the <em class="text-red-600 dark:text-red-500">Destruction</em></h2>
+                <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-lg">These are real photos of the same property — a stunning 2.5-acre estate demolished and stripped bare within months. The MLS listing photos prove it was a thriving, occupied home. The February 2026 photos show what the developer left behind.</p>
+            </div>
+
+            <!-- BEFORE label -->
+            <div class="flex items-center gap-4 mb-6 scroll-reveal">
+                <div class="flex items-center gap-2 bg-stone-900 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    <iconify-icon icon="lucide:trees" width="16"></iconify-icon>
+                    THIS IS SHERWOOD FOREST — And We're Fighting To Keep It
+                </div>
+                <div class="flex-1 h-px bg-stone-200 dark:bg-stone-800"></div>
+                <span class="text-xs text-stone-400 font-medium">MLS Listing Photos</span>
+            </div>
+
+            <!-- BEFORE photos — 2 across since one is already in hero -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 scroll-reveal">
+                <div class="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer" onclick="openLightbox('before_aerial_1.png', 'Aerial view — tennis courts, palm trees, manicured lawns.')">
+                    <img src="before_aerial_1.png" alt="Before — aerial showing tennis courts and full estate" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-xs font-semibold">Click to enlarge</p>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-black/70 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full backdrop-blur-sm">
+                        Tennis Courts &amp; Lawns
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-lg group cursor-pointer" onclick="openLightbox('before_aerial_3.png', 'Top-down aerial view of the full 2.5-acre property with home, pool, tennis court, and hundreds of mature trees.')">
+                    <img src="before_aerial_3.png" alt="Before — top-down aerial of full property" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-xs font-semibold">Click to enlarge</p>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-black/70 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full backdrop-blur-sm">
+                        Full 2.5-Acre Estate
+                    </div>
+                </div>
+            </div>
+
+            <!-- AFTER label -->
+            <div class="flex items-center gap-4 mb-6 scroll-reveal">
+                <div class="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    <iconify-icon icon="lucide:alert-triangle" width="16"></iconify-icon>
+                    AFTER — February 25, 2026
+                </div>
+                <div class="flex-1 h-px bg-red-200 dark:bg-red-900/40"></div>
+                <span class="text-xs text-red-500 font-medium">Demolished within months of application</span>
+            </div>
+
+            <!-- AFTER photos — 2 large -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 scroll-reveal">
+                <div class="relative rounded-2xl overflow-hidden shadow-xl border-2 border-red-300 dark:border-red-800 group cursor-pointer" onclick="openLightbox('after_demolition_1.png', 'February 25, 2026 — Hitachi excavator amid rubble. The home, pool, tennis court and hundreds of trees are gone. Bare dirt remains.')">
+                    <img src="after_demolition_1.png" alt="After demolition — excavator and rubble, Feb 25 2026" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-red-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-xs font-semibold">Click to enlarge</p>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                        Feb 25, 2026 — Excavator &amp; Rubble
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-xl border-2 border-red-300 dark:border-red-800 group cursor-pointer" onclick="openLightbox('after_demolition_2.png', 'February 25, 2026 — Bare stripped earth where hundreds of mature trees once stood. Felled tree trunks piled in the foreground.')">
+                    <img src="after_demolition_2.png" alt="After demolition — bare earth and felled trees, Feb 25 2026" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-red-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white text-xs font-semibold">Click to enlarge</p>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                        Feb 25, 2026 — Bare Earth &amp; Felled Trees
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evidence callout -->
+            <div class="scroll-reveal bg-red-50 dark:bg-red-950/20 border-2 border-red-200 dark:border-red-900/50 rounded-2xl p-6 mb-10">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                        <iconify-icon icon="lucide:gavel" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <div>
+                        <p class="font-bold text-red-800 dark:text-red-300 mb-1">These Photos Are Legal Evidence</p>
+                        <p class="text-sm text-red-700 dark:text-red-400 leading-relaxed">The MLS listing photos prove this was an occupied, thriving family home — not a vacant lot. The City's own SHRA Implementation Memo says a project cannot be approved when housing has been demolished to manufacture vacancy. The developer demolished the home, then applied under a law designed for genuinely vacant land.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tree environmental value -->
+            <div class="scroll-reveal bg-green-50 dark:bg-green-950/20 border-2 border-green-300 dark:border-green-900/50 rounded-2xl p-6 mb-10">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 bg-green-700 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                        <iconify-icon icon="lucide:trees" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <div>
+                        <p class="font-bold text-green-800 dark:text-green-300 mb-2">The True Cost of Cutting Down Hundreds of Mature Trees</p>
+                        <p class="text-sm text-green-700 dark:text-green-400 leading-relaxed mb-3">According to the Tennessee Environmental Council, <strong class="text-green-900 dark:text-green-200">one mature tree every year</strong> can clean up to:</p>
+                        <div class="grid sm:grid-cols-3 gap-3 mb-3">
+                            <div class="bg-white dark:bg-green-900/30 rounded-xl p-3 text-center border border-green-200 dark:border-green-800">
+                                <p class="text-2xl font-bold text-green-700 dark:text-green-400">400 lbs</p>
+                                <p class="text-xs text-green-600 dark:text-green-500">of air pollution cleaned from the air</p>
+                            </div>
+                            <div class="bg-white dark:bg-green-900/30 rounded-xl p-3 text-center border border-green-200 dark:border-green-800">
+                                <p class="text-2xl font-bold text-green-700 dark:text-green-400">$1,250</p>
+                                <p class="text-xs text-green-600 dark:text-green-500">in air pollution controls</p>
+                            </div>
+                            <div class="bg-white dark:bg-green-900/30 rounded-xl p-3 text-center border border-green-200 dark:border-green-800">
+                                <p class="text-2xl font-bold text-green-700 dark:text-green-400">$638</p>
+                                <p class="text-xs text-green-600 dark:text-green-500">worth of oxygen generated</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-green-700 dark:text-green-400 leading-relaxed">Hundreds of mature trees were cut down on this property. Their environmental value to our neighborhood — in cleaner air, cooler temperatures, and carbon absorption — is irreplaceable and was never assessed before demolition. A hundred trees can also potentially clean the air for adjacent neighborhoods as well. <a href="https://www.deeproot.com/blog/blog-entries/clearing-the-air/" target="_blank" rel="noopener" class="underline font-semibold">Source: Deep Root / Tennessee Environmental Council</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[999] bg-black/95 hidden items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-5xl w-full" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white/70 hover:text-white text-sm font-semibold flex items-center gap-2">
+                <iconify-icon icon="lucide:x" width="20"></iconify-icon> Close
+            </button>
+            <img id="lightbox-img" src="" alt="" class="w-full max-h-[80vh] object-contain rounded-xl shadow-2xl">
+            <p id="lightbox-caption" class="text-stone-300 text-sm mt-4 text-center leading-relaxed"></p>
+        </div>
+    </div>
+
+    <!-- ========== ENCINO & PARTHENIA + NEIGHBOR VOICES ========== -->
+    <section class="py-24 bg-stone-950 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-400 mb-4">One Block Away — Already Built</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-4">This Is What The <em class="text-red-400">Developer Already Built</em></h2>
+                <p class="text-stone-400 leading-relaxed text-lg">These photos are from Parthenia & Encino — just one block away — where the same developer completed a similar project. Dark, industrial-looking two-story structures completely out of character with Sherwood Forest's established neighborhood character. Now imagine <strong class="text-white">40 confirmed units plus remainder parcels for future development on the corner of Parthenia and Shoshone</strong>.</p>
+            </div>
+
+            <!-- Photo Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 scroll-reveal">
+                <div class="relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer" onclick="openLightbox('Encino_Parthenia_4.png', 'Parthenia & Encino — completed project by the same developer. Dark, dense, two-story structures lining the street.')">
+                    <img src="Encino_Parthenia_4.png" alt="Parthenia & Encino development — same developer" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700" style="filter: brightness(1.3) contrast(1.05);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Same Developer</div>
+                    <div class="absolute bottom-3 left-3 right-3"><p class="text-white text-xs font-semibold">Parthenia & Encino — Already Built</p></div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer" onclick="openLightbox('Encino_Parthenia_3.png', 'Close-up of the dark, industrial-style structures at Parthenia & Encino. Completely out of character with Sherwood Forest.')">
+                    <img src="Encino_Parthenia_3.png" alt="Parthenia & Encino — close up of structures" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700" style="filter: brightness(1.3) contrast(1.05);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Same Developer</div>
+                    <div class="absolute bottom-3 left-3 right-3"><p class="text-white text-xs font-semibold">Industrial look — no regard for neighborhood character</p></div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer" onclick="openLightbox('Encino_Parthenia_2.png', 'Street view of the Parthenia & Encino project — dark walls, dense units, completely blocking the street.')">
+                    <img src="Encino_Parthenia_2.png" alt="Parthenia & Encino — street view" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700" style="filter: brightness(1.6) contrast(1.08);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Same Developer</div>
+                    <div class="absolute bottom-3 left-3 right-3"><p class="text-white text-xs font-semibold">Dense wall of structures blocking the street</p></div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer" onclick="openLightbox('Encino_Parthenia_1.png', 'Construction dumpster and dark structures at Parthenia & Encino. This is what the same developer plans to multiply at Shoshone.')">
+                    <img src="Encino_Parthenia_1.png" alt="Parthenia & Encino — construction phase" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-700" style="filter: brightness(1.6) contrast(1.08);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">Same Developer</div>
+                    <div class="absolute bottom-3 left-3 right-3"><p class="text-white text-xs font-semibold">Construction — Montejo Demolition containers on site</p></div>
+                </div>
+            </div>
+
+            <!-- Impact Statement -->
+            <div class="scroll-reveal bg-red-600/10 border-2 border-red-500/30 rounded-2xl p-8 text-center max-w-3xl mx-auto mb-16">
+                <p class="text-2xl font-serif font-bold text-white mb-3">Now imagine <span class="text-red-400">40 confirmed units</span> — plus remainder parcels for future development</p>
+                <p class="text-stone-300 leading-relaxed">crammed onto the corner of Parthenia and Shoshone — where a stunning 2.5-acre estate with hundreds of mature trees, a tennis court, and a swimming pool once stood. All built without a single public hearing, without any traffic or safety study, and without one vote from the community that has to live next to them.</p>
+            </div>
+
+            <!-- Neighbor Voices -->
+            <div class="text-center max-w-3xl mx-auto mb-12 scroll-reveal" id="voices">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-400 mb-4">Neighbor Voices</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6 text-white">Hear from Those <em class="text-red-400">Directly Affected</em></h2>
+                <p class="text-stone-400 leading-relaxed text-lg">These neighbors live next to the Parthenia & Encino development — built by the same developer now planning 40+ confirmed units at Parthenia & Shoshone. Their experience is a preview of what's coming.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- CHRISTY'S VIDEO -->
+                <div class="scroll-reveal">
+                    <a href="https://www.youtube.com/watch?v=1rHNldjm8hM" target="_blank" rel="noopener" class="block relative rounded-2xl overflow-hidden shadow-xl aspect-video group cursor-pointer">
+                        <img src="https://img.youtube.com/vi/1rHNldjm8hM/maxresdefault.jpg" alt="Christy's testimony — click to watch on YouTube" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                            <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                                <iconify-icon icon="lucide:play" width="36" class="text-white ml-1"></iconify-icon>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-3 left-3 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                            ▶ Watch on YouTube
+                        </div>
+                    </a>
+                    <div class="mt-4 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                        <iconify-icon icon="lucide:quote" width="24" class="text-red-500 mb-2"></iconify-icon>
+                        <p class="text-stone-300 leading-relaxed text-sm italic">"They cut down every tree. The noise, the dust, the traffic — it never stops. Our property values, our peace of mind, our entire way of life has been destroyed. And when we complained, no one listened. No one from the City even came to see what was happening to us."</p>
+                        <p class="text-stone-500 text-sm font-semibold mt-3">— Christy, Adjacent Resident</p>
+                    </div>
+                </div>
+
+                <!-- JON'S VIDEO -->
+                <div class="scroll-reveal">
+                    <div class="rounded-2xl aspect-video overflow-hidden shadow-xl">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/KzgLnSSmeaQ" title="Jon — Sherwood Forest Neighbor Testimony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="mt-4 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                        <iconify-icon icon="lucide:quote" width="24" class="text-red-500 mb-2"></iconify-icon>
+                        <p class="text-stone-300 leading-relaxed text-sm italic">"We've lived here for over 30 years. This was a horse community — our kids rode on these trails. Now we look at concrete boxes where beautiful oaks used to be. Our quality of life has been dramatically impacted and we feel the City has not adequately addressed our concerns."</p>
+                        <p class="text-stone-500 text-sm font-semibold mt-3">— John, Long-time Sherwood Forest Resident</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-stone-50 dark:bg-stone-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 mb-4">Critical Evidence & Tools</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-4">The Evidence: <em class="text-red-600 dark:text-red-400">Public Records Tell the Story</em></h2>
+                <p class="text-stone-600 dark:text-stone-400 leading-relaxed">A timeline that raises serious questions, a $65,000/month rental listing, and a development that raises questions about how state housing laws are being applied in established neighborhoods. The public record raises questions worth examining.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+
+                <!-- LLC Evidence Card - NEW BOMBSHELL -->
+                <div class="scroll-reveal bg-white dark:bg-stone-800 rounded-2xl border-2 border-red-300 dark:border-red-800 p-6 md:col-span-2">
+                    <div class="w-12 h-12 bg-red-700 rounded-xl flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:building-2" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 mb-2">California Secretary of State — Public Record</div>
+                    <h3 class="font-bold text-xl mb-3">Two LLCs. Same Owner. Same Day. Four Months Before Purchase.</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-4">California Secretary of State records confirm that both <strong class="text-black dark:text-white">17545 Parthenia St. LLC</strong> and <strong class="text-black dark:text-white">17531 Parthenia St. LLC</strong> were formed on the <strong class="text-black dark:text-white">exact same day — September 24, 2025</strong> — by the same individual, at the same address in Sherman Oaks. The property was not purchased until <strong class="text-black dark:text-white">January 30, 2026</strong> — four months later.</p>
+                    <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-4 border border-red-200 dark:border-red-900/40">
+                            <p class="text-xs font-bold text-red-600 dark:text-red-400 uppercase tracking-wider mb-2">17545 Parthenia St. LLC</p>
+                            <p class="text-sm text-stone-600 dark:text-stone-400">Filed: <strong class="text-black dark:text-white">September 24, 2025</strong></p>
+                            <p class="text-sm text-stone-600 dark:text-stone-400">Agent: <strong class="text-black dark:text-white">Lior Mandelbaum</strong></p>
+                            <p class="text-sm text-stone-600 dark:text-stone-400">Status: Active</p>
+                        </div>
+                        <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-4 border border-red-200 dark:border-red-900/40">
+                            <p class="text-xs font-bold text-red-600 dark:text-red-400 uppercase tracking-wider mb-2">17531 Parthenia St. LLC</p>
+                            <p class="text-sm text-stone-600 dark:text-stone-400">Filed: <strong class="text-black dark:text-white">September 24, 2025</strong></p>
+                            <p class="text-sm text-stone-600 dark:text-stone-400">Agent: <strong class="text-black dark:text-white">Lior Mandelbaum</strong></p>
+                            <p class="text-sm text-stone-600 dark:text-stone-400">Status: Active</p>
+                        </div>
+                    </div>
+                    <div class="bg-stone-50 dark:bg-stone-700/50 rounded-xl p-4 border border-stone-200 dark:border-stone-600">
+                        <p class="text-stone-700 dark:text-stone-300 text-sm leading-relaxed">This public record raises serious questions: if two separate LLCs were created four months before the property was even purchased — each named after a specific address on the same parcel — this suggests detailed plans existed well before the demolition permit was filed. The City has been asked to determine whether these two applications represent one coordinated project under common ownership and control.</p>
+                    </div>
+                </div>
+
+                <!-- ICO Card -->
+                <div class="scroll-reveal bg-white dark:bg-stone-800 rounded-2xl border-2 border-red-200 dark:border-red-900/40 p-6">
+                    <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:shield-alert" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-400 mb-2">Our Most Powerful Tool</div>
+                    <h3 class="font-bold text-xl mb-3">ICO — Interim Control Ordinance</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-4">Los Angeles can issue an <strong class="text-black dark:text-white">Interim Control Ordinance (ICO)</strong> — a temporary emergency zoning law that freezes building permits, grading, and demolitions in a specific area for 1–2 years while the City updates long-term community plans. This is one of the strongest tools available to halt what's happening on Parthenia Street right now.</p>
+                    <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-4 border border-red-200 dark:border-red-900/40">
+                        <p class="text-red-700 dark:text-red-400 text-sm font-bold mb-1">What you can do:</p>
+                        <p class="text-red-600 dark:text-red-400 text-sm">Demand that Councilman John Lee introduce an ICO for the Sherwood Forest / Northridge area immediately. Assemblywoman Schiavo has already indicated support for the required findings. Every call and email demanding an ICO helps make it happen.</p>
+                    </div>
+                </div>
+
+
+                <!-- Rental Listing / Not Starter Homes Card -->
+                <div class="scroll-reveal bg-white dark:bg-stone-800 rounded-2xl border-2 border-stone-200 dark:border-stone-700 p-6">
+                    <div class="w-12 h-12 bg-stone-700 rounded-xl flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:dollar-sign" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-stone-500 mb-2">Not "Starter Homes"</div>
+                    <h3 class="font-bold text-xl mb-3">$65,000/Month — The Developer's Real Plan</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-4">The completed development at <strong class="text-black dark:text-white">8670 Encino Ave</strong> — built by the same developer using the same state housing law loopholes — was listed on Apartments.com for <strong class="text-black dark:text-white">$65,000 per month</strong>. 15 bedrooms. 18 bathrooms. 10,620 sq ft. This is not a starter home. This is not affordable housing. These laws were designed to help working families buy homes — not intended for developments of this scale in established low-density neighborhoods.</p>
+                    <div class="rounded-xl overflow-hidden border-2 border-stone-200 dark:border-stone-600 mb-4 cursor-pointer" onclick="openLightbox('8670_rental_listing.png', '8670 Encino Ave listed on MLS for $65,000/month — 15 beds, 18 baths, 10,620 sq ft.')">
+                        <img src="8670_rental_listing.png" alt="8670 Encino Ave — $65,000/month MLS listing" class="w-full h-48 object-cover object-top hover:scale-105 transition-transform duration-500">
+                        <div class="bg-stone-900 text-white text-xs font-bold px-4 py-2 flex items-center justify-between">
+                            <span>8670 Encino Ave — MLS #26650643</span>
+                            <span class="text-green-400">$65,000 / month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Attached ADU Switch Card -->
+                <div class="scroll-reveal bg-white dark:bg-stone-800 rounded-2xl border-2 border-red-200 dark:border-red-900/40 p-6">
+                    <div class="w-12 h-12 bg-red-800 rounded-xl flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:git-branch" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-red-700 dark:text-red-400 mb-2">Why Both Matter</div>
+                    <h3 class="font-bold text-xl mb-3">Attached AND Detached ADUs Must Both Be Addressed</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-4">On February 22, 2026, Councilman John Lee wrote to State Senator Henry Stern asking him to restore the 1,200 sq ft cap specifically on <strong class="text-black dark:text-white">detached ADUs</strong> — citing the Encino & Parthenia project as an example of the problem.</p>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-4">It is important to note that the new Shoshone & Parthenia project uses <strong class="text-black dark:text-white">attached ADUs</strong>. Any amendment that only addresses detached ADUs would not apply to attached ADUs. This is why any legislative fix, and any ICO, must explicitly cover <strong class="text-black dark:text-white">both attached and detached ADUs</strong> to be effective.</p>
+                    <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-4 border border-red-200 dark:border-red-900/40">
+                        <p class="text-red-700 dark:text-red-400 text-sm font-bold mb-1">What we are asking for:</p>
+                        <p class="text-red-600 dark:text-red-400 text-sm">An <strong>Interim Control Ordinance (ICO) covering both attached and detached ADUs</strong> is urgently needed to freeze further approvals while legislators close all the relevant loopholes — not just some of them.</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- #4 - Developer Plans AFTER piecemealing, with zoomed version side by side -->
+            <div class="mt-10 scroll-reveal">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-3 bg-stone-900 text-white px-5 py-3 rounded-xl text-base font-bold shadow-lg">
+                        <iconify-icon icon="lucide:map" width="20"></iconify-icon>
+                        DEVELOPER'S SUBDIVISION PLAN — Vesting Tentative Tract Map No. 85030
+                    </div>
+                    <div class="flex-1 h-px bg-stone-300 dark:bg-stone-700"></div>
+                    <span class="text-xs text-stone-400 font-medium">Filed April 14, 2026</span>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <!-- Full plan -->
+                    <div class="rounded-2xl overflow-hidden border-2 border-red-300 dark:border-red-800 group cursor-pointer" onclick="openLightbox('https://z-cdn-media.chatglm.cn/files/bf90cf54-c874-4ee0-aaf2-7cb2d2951fc8.png?auth_key=1879130623-35ce7e077f5e4b9c8e45868fd78a4f98-0-2f724b27ff845e02a0f24cdb5cc21aa8', 'Vesting Tentative Tract Map No. 85030 — Full plan showing 9 lots carved from one 2.5-acre estate.')">
+                        <div class="relative bg-white dark:bg-stone-900 overflow-hidden">
+                            <img src="https://z-cdn-media.chatglm.cn/files/bf90cf54-c874-4ee0-aaf2-7cb2d2951fc8.png?auth_key=1879130623-35ce7e077f5e4b9c8e45868fd78a4f98-0-2f724b27ff845e02a0f24cdb5cc21aa8" alt="Vesting Tentative Tract Map — Full plan" class="w-full h-72 object-contain group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">⚠️ Revised Plan — 10 Units + Remainder</div>
+                            <div class="absolute top-2 right-2 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded-full">Click to enlarge</div>
+                        </div>
+                        <div class="p-3 bg-white dark:bg-stone-900">
+                            <p class="text-xs text-stone-600 dark:text-stone-400">Revised plans: 10 residential lots + 1 remainder parcel per application. 20 confirmed units per parcel, 40 total. Remainder parcels marked "Future Use Vacant."</p>
+                        </div>
+                    </div>
+                    <!-- AI Aerial Rendering — Full 4-Phase Buildout Visualization -->
+                    <div class="rounded-2xl overflow-hidden border-2 border-red-300 dark:border-red-800 group cursor-pointer" onclick="openLightbox('aerial_rendering_revised.png', 'Aerial composite showing all 4 phases of the proposed development overlaid on the actual lot — 40 confirmed dwelling units (10 per lot + JDU) across two parcels, with remainder parcels marked for future development. Where one family home stood since 1941.')">
+                        <div class="relative bg-black overflow-hidden" style="height: 288px;">
+                            <img src="aerial_rendering_revised.png" alt="Aerial rendering — two lots side by side, 10 units each with remainder parcels for future development" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-3 left-3 bg-red-700 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">🏗️ Confirmed Buildout — 40 Units + Future Parcels</div>
+                            <div class="absolute top-2 right-2 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded-full">Click to enlarge</div>
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent px-3 py-2">
+                                <p class="text-white text-[10px] font-semibold">⚠️ Rendering shows confirmed 40 units across 2 lots — remainder parcels reserved for future development</p>
+                            </div>
+                        </div>
+                        <div class="p-3 bg-white dark:bg-stone-900">
+                            <p class="text-xs text-stone-600 dark:text-stone-400">Aerial rendering showing two lots side by side: 10 townhomes + JDU per lot = 40 confirmed units. Remainder parcels at bottom of each lot marked for future development. Surrounding single-family homes shown for scale and contrast.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEW SITE PLAN DIAGRAM -->
+            <div class="mt-10 scroll-reveal">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-3 bg-red-700 text-white px-5 py-3 rounded-xl text-base font-bold shadow-lg">
+                        <iconify-icon icon="lucide:layout-grid" width="20"></iconify-icon>
+                        REVISED SITE PLAN — Both Lots, 10 Units Each + Remainder Parcels
+                    </div>
+                    <div class="flex-1 h-px bg-stone-300 dark:bg-stone-700"></div>
+                    <span class="text-xs text-stone-400 font-medium">Confirmed May 28, 2026</span>
+                </div>
+                <div class="bg-white dark:bg-stone-900 rounded-2xl border-2 border-red-300 dark:border-red-800 p-6">
+                    <div class="grid sm:grid-cols-3 gap-4 mb-6 text-center">
+                        <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-3 border border-red-200 dark:border-red-900">
+                            <p class="text-3xl font-bold text-red-600">40</p>
+                            <p class="text-xs text-stone-600 dark:text-stone-400">Confirmed dwelling units (20 per parcel)</p>
+                        </div>
+                        <div class="bg-amber-50 dark:bg-amber-950/30 rounded-xl p-3 border border-amber-200 dark:border-amber-900">
+                            <p class="text-3xl font-bold text-amber-600">2</p>
+                            <p class="text-xs text-stone-600 dark:text-stone-400">Remainder parcels — "Future Use Vacant"</p>
+                        </div>
+                        <div class="bg-stone-50 dark:bg-stone-800 rounded-xl p-3 border border-stone-200 dark:border-stone-700">
+                            <p class="text-3xl font-bold text-stone-800 dark:text-white">2.34</p>
+                            <p class="text-xs text-stone-600 dark:text-stone-400">Combined acres — 56% over SB 684 limit</p>
+                        </div>
+                    </div>
+                    <!-- Inline SVG site plan -->
+                    <div class="w-full overflow-x-auto">
+                        <svg width="100%" viewBox="0 0 680 520" role="img" xmlns="http://www.w3.org/2000/svg">
+                            <title>Revised site plan — two lots side by side, 10 units each plus remainder parcels</title>
+                            <desc>VTT-85031 Lot 17 on left, VTT-85030 Lot 16 on right, each with 10 townhome lots and a hatched remainder parcel at the bottom marked for future use</desc>
+                            <defs>
+                                <pattern id="hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                                    <line x1="0" y1="0" x2="0" y2="6" stroke="#dc2626" stroke-width="0.8" opacity="0.3"/>
+                                </pattern>
+                            </defs>
+                            <!-- Street labels -->
+                            <text x="340" y="18" text-anchor="middle" font-size="11" font-weight="600" fill="#78716c" font-family="sans-serif">PARTHENIA STREET</text>
+                            <line x1="55" y1="24" x2="625" y2="24" stroke="#78716c" stroke-width="1.5"/>
+                            <text x="340" y="510" text-anchor="middle" font-size="11" font-weight="600" fill="#78716c" font-family="sans-serif">RYAN STREET</text>
+                            <line x1="55" y1="498" x2="625" y2="498" stroke="#78716c" stroke-width="1.5"/>
+                            <text x="28" y="265" text-anchor="middle" font-size="10" font-weight="500" fill="#78716c" font-family="sans-serif" transform="rotate(-90 28 265)">SHOSHONE</text>
+                            <line x1="50" y1="30" x2="50" y2="495" stroke="#78716c" stroke-width="1.5"/>
+                            <text x="656" y="265" text-anchor="middle" font-size="10" font-weight="500" fill="#78716c" font-family="sans-serif" transform="rotate(90 656 265)">ENCINO</text>
+                            <line x1="630" y1="30" x2="630" y2="495" stroke="#78716c" stroke-width="1.5"/>
+
+                            <!-- LOT 17 — VTT-85031 LEFT -->
+                            <rect x="55" y="30" width="280" height="465" rx="2" fill="white" stroke="#dc2626" stroke-width="1.5"/>
+                            <rect x="55" y="30" width="280" height="30" fill="#dc2626"/>
+                            <text x="195" y="50" text-anchor="middle" font-size="11" font-weight="700" fill="white" font-family="sans-serif">VTT-85031 — Lot 17 — "Parthenia Villas 2"</text>
+                            <!-- Fire lane top -->
+                            <rect x="63" y="65" width="264" height="16" rx="2" fill="#fee2e2"/>
+                            <text x="195" y="77" text-anchor="middle" font-size="9" fill="#dc2626" font-family="sans-serif">Common Access &amp; Fire Lane → Shoshone Ave</text>
+                            <!-- 4 top units -->
+                            <rect x="63" y="85" width="60" height="72" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+                            <text x="93" y="118" text-anchor="middle" font-size="9" fill="#1e40af" font-family="sans-serif">Lot 1</text>
+                            <text x="93" y="130" text-anchor="middle" font-size="8" fill="#3b82f6" font-family="sans-serif">Unit A+JDU</text>
+                            <rect x="127" y="85" width="60" height="72" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+                            <text x="157" y="118" text-anchor="middle" font-size="9" fill="#1e40af" font-family="sans-serif">Lot 2</text>
+                            <text x="157" y="130" text-anchor="middle" font-size="8" fill="#3b82f6" font-family="sans-serif">Unit A+JDU</text>
+                            <rect x="191" y="85" width="60" height="72" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+                            <text x="221" y="118" text-anchor="middle" font-size="9" fill="#1e40af" font-family="sans-serif">Lot 3</text>
+                            <text x="221" y="130" text-anchor="middle" font-size="8" fill="#3b82f6" font-family="sans-serif">Unit A+JDU</text>
+                            <rect x="255" y="85" width="62" height="72" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+                            <text x="286" y="118" text-anchor="middle" font-size="9" fill="#1e40af" font-family="sans-serif">Lot 4</text>
+                            <text x="286" y="130" text-anchor="middle" font-size="8" fill="#3b82f6" font-family="sans-serif">Unit A+JDU</text>
+                            <!-- Fire lane middle -->
+                            <rect x="63" y="161" width="264" height="16" rx="2" fill="#fee2e2"/>
+                            <text x="195" y="173" text-anchor="middle" font-size="9" fill="#dc2626" font-family="sans-serif">Common Access &amp; Fire Lane</text>
+                            <!-- 6 bottom units -->
+                            <rect x="63" y="181" width="60" height="66" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+                            <text x="93" y="210" text-anchor="middle" font-size="9" fill="#1e40af" font-family="sans-serif">Lot 7</text>
+                            <rect x="63" y="251" width="60" height="66" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+                            <text x="93" y="280" text-anchor="middle" font-size="9" fill="#1e40af" font-family="sans-serif">Lot 8</text>
+                            <rect x="157" y="181" width="60" height="66" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+                            <text x="187" y="210" text-anchor="middle" font-size="9" fill="#1e40af" font-family="sans-serif">Lot 6</text>
+                            <rect x="157" y="251" width="60" height="66" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+                            <text x="187" y="280" text-anchor="middle" font-size="9" fill="#1e40af" font-family="sans-serif">Lot 9</text>
+                            <rect x="255" y="181" width="62" height="66" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+                            <text x="286" y="210" text-anchor="middle" font-size="9" fill="#1e40af" font-family="sans-serif">Lot 5</text>
+                            <rect x="255" y="251" width="62" height="66" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="0.8"/>
+                            <text x="286" y="280" text-anchor="middle" font-size="9" fill="#1e40af" font-family="sans-serif">Lot 10</text>
+                            <!-- Fire lane bottom -->
+                            <rect x="63" y="321" width="264" height="16" rx="2" fill="#fee2e2"/>
+                            <text x="195" y="333" text-anchor="middle" font-size="9" fill="#dc2626" font-family="sans-serif">Common Access &amp; Fire Lane</text>
+                            <!-- Remainder parcel -->
+                            <rect x="63" y="341" width="264" height="140" rx="3" fill="url(#hatch2)" stroke="#dc2626" stroke-width="1" stroke-dasharray="5 3"/>
+                            <text x="195" y="395" text-anchor="middle" font-size="10" font-weight="700" fill="#dc2626" font-family="sans-serif">LOT 11 — REMAINDER PARCEL</text>
+                            <text x="195" y="413" text-anchor="middle" font-size="9" fill="#dc2626" font-family="sans-serif">"For Future Use Vacant"</text>
+                            <text x="195" y="429" text-anchor="middle" font-size="9" fill="#78716c" font-family="sans-serif">13,706 sq ft</text>
+                            <text x="195" y="445" text-anchor="middle" font-size="9" font-weight="600" fill="#dc2626" font-family="sans-serif">⚠ Future development planned</text>
+                            <!-- Unit count -->
+                            <rect x="80" y="463" width="230" height="20" rx="10" fill="#dc2626"/>
+                            <text x="195" y="477" text-anchor="middle" font-size="9" font-weight="700" fill="white" font-family="sans-serif">10 units × 2 (main + JDU) = 20 confirmed dwellings</text>
+
+                            <!-- LOT 16 — VTT-85030 RIGHT -->
+                            <rect x="345" y="30" width="280" height="465" rx="2" fill="white" stroke="#d97706" stroke-width="1.5"/>
+                            <rect x="345" y="30" width="280" height="30" fill="#d97706"/>
+                            <text x="485" y="50" text-anchor="middle" font-size="11" font-weight="700" fill="white" font-family="sans-serif">VTT-85030 — Lot 16 — "Parthenia Villas 3"</text>
+                            <!-- Fire lane top -->
+                            <rect x="353" y="65" width="264" height="16" rx="2" fill="#fef9c3"/>
+                            <text x="485" y="77" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Common Access &amp; Fire Lane → Shoshone Ave</text>
+                            <!-- 4 top units -->
+                            <rect x="353" y="85" width="60" height="72" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+                            <text x="383" y="118" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Lot 1</text>
+                            <text x="383" y="130" text-anchor="middle" font-size="8" fill="#b45309" font-family="sans-serif">Unit A+JDU</text>
+                            <rect x="417" y="85" width="60" height="72" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+                            <text x="447" y="118" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Lot 2</text>
+                            <text x="447" y="130" text-anchor="middle" font-size="8" fill="#b45309" font-family="sans-serif">Unit A+JDU</text>
+                            <rect x="481" y="85" width="60" height="72" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+                            <text x="511" y="118" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Lot 3</text>
+                            <text x="511" y="130" text-anchor="middle" font-size="8" fill="#b45309" font-family="sans-serif">Unit A+JDU</text>
+                            <rect x="545" y="85" width="62" height="72" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+                            <text x="576" y="118" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Lot 4</text>
+                            <text x="576" y="130" text-anchor="middle" font-size="8" fill="#b45309" font-family="sans-serif">Unit A+JDU</text>
+                            <!-- Fire lane middle -->
+                            <rect x="353" y="161" width="264" height="16" rx="2" fill="#fef9c3"/>
+                            <text x="485" y="173" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Common Access &amp; Fire Lane</text>
+                            <!-- 6 bottom units -->
+                            <rect x="353" y="181" width="60" height="66" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+                            <text x="383" y="210" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Lot 7</text>
+                            <rect x="353" y="251" width="60" height="66" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+                            <text x="383" y="280" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Lot 8</text>
+                            <rect x="447" y="181" width="60" height="66" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+                            <text x="477" y="210" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Lot 6</text>
+                            <rect x="447" y="251" width="60" height="66" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+                            <text x="477" y="280" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Lot 9</text>
+                            <rect x="545" y="181" width="62" height="66" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+                            <text x="576" y="210" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Lot 5</text>
+                            <rect x="545" y="251" width="62" height="66" rx="3" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+                            <text x="576" y="280" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Lot 10</text>
+                            <!-- Fire lane bottom -->
+                            <rect x="353" y="321" width="264" height="16" rx="2" fill="#fef9c3"/>
+                            <text x="485" y="333" text-anchor="middle" font-size="9" fill="#92400e" font-family="sans-serif">Common Access &amp; Fire Lane</text>
+                            <!-- Remainder parcel -->
+                            <rect x="353" y="341" width="264" height="140" rx="3" fill="url(#hatch2)" stroke="#d97706" stroke-width="1" stroke-dasharray="5 3"/>
+                            <text x="485" y="395" text-anchor="middle" font-size="10" font-weight="700" fill="#d97706" font-family="sans-serif">LOT 11 — REMAINDER PARCEL</text>
+                            <text x="485" y="413" text-anchor="middle" font-size="9" fill="#d97706" font-family="sans-serif">"For Future Use Vacant"</text>
+                            <text x="485" y="429" text-anchor="middle" font-size="9" fill="#78716c" font-family="sans-serif">13,347 sq ft</text>
+                            <text x="485" y="445" text-anchor="middle" font-size="9" font-weight="600" fill="#d97706" font-family="sans-serif">⚠ Future development planned</text>
+                            <!-- Unit count -->
+                            <rect x="370" y="463" width="230" height="20" rx="10" fill="#d97706"/>
+                            <text x="485" y="477" text-anchor="middle" font-size="9" font-weight="700" fill="white" font-family="sans-serif">10 units × 2 (main + JDU) = 20 confirmed dwellings</text>
+
+                            <!-- Easement connector -->
+                            <line x1="335" y1="200" x2="345" y2="200" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3 2"/>
+                            <text x="340" y="196" text-anchor="middle" font-size="7" fill="#dc2626" font-family="sans-serif">Easement</text>
+                        </svg>
+                    </div>
+                    <div class="mt-4 bg-red-50 dark:bg-red-950/20 rounded-xl p-4 border border-red-200 dark:border-red-900">
+                        <p class="text-red-700 dark:text-red-400 text-xs font-semibold">Both remainder parcels (Lot 11) are marked "For Future Use Vacant" on the developer's own submitted plans — confirming additional development is planned beyond the confirmed 40 units. The developer's own email states he cannot use the remainder lots for SB 1123 or SB 9 — meaning a different mechanism will be used for future phases.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="legal" class="py-16 bg-stone-950 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-400 mb-4">Questions That Need Answers</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-4">Possible Concerns That <em class="text-red-400">Need To Be Addressed</em></h2>
+                <p class="text-stone-400 leading-relaxed">The following questions arise from publicly available records related to this development. We believe they warrant formal review and written responses from the City of Los Angeles.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 scroll-reveal">
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
+                    <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:home-x" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-red-400 mb-2">Question #1</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Vacancy Eligibility — Was This Site Genuinely Vacant?</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-4">The property contained a residential structure dating back to the <strong class="text-white">1940s</strong>. After demolition — which included removal of hundreds of trees, filling of the swimming pool, and removal of the tennis court — applications were submitted under SB 1123, a law designed for genuinely vacant land. The City's own SHRA Implementation Memo states that a project may not be approved when housing has been demolished prior to application. We are asking the City to confirm in writing that this eligibility requirement was independently verified.</p>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                        <p class="text-xs text-red-300 font-semibold">The demolition permit date and SHRA application date are public record — and the timeline between them warrants scrutiny.</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
+                    <div class="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:scissors" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Question #2</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Project Aggregation — Should These Applications Be Reviewed Together?</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-4">Both parcels are owned by the same LLC — 17531 Parthenia Street LLC, c/o Lior Mandelbaum — and use the same engineering firm. By filing two separate applications, the combined project appears to stay below the 10-unit threshold that triggers full public review. Combined across both parcels: 40 confirmed dwelling units (20 per parcel), with two remainder parcels marked for future development. California's anti-piecemealing doctrine addresses exactly this type of project fragmentation, and we have formally requested a written determination from the City.</p>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                        <p class="text-xs text-amber-300 font-semibold">Same owner. Same engineer. Two applications that raise piecemealing concerns under California law.</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
+                    <div class="w-12 h-12 bg-stone-500 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:ruler" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-2">Question #3</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Lot Size Eligibility — Does This Parcel Meet the Statutory Cap?</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-4">SB 1123 limits eligible single-family-zoned parcels to a maximum of 1.5 acres. The submitted Tract Map for Lot 16 alone shows a remainder parcel of 25,656 square feet — over half an acre by itself. The City has not provided written confirmation that the full pre-subdivision acreage was independently verified. Subdivision Map Act compliance — including legal lot configuration, easements, dedications, and access rights — has never been publicly confirmed.</p>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                        <p class="text-xs text-stone-300 font-semibold">This is a 2.5-acre estate. SB 1123 was written for lots under 1.5 acres.</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
+                    <div class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:alert-triangle" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Question #4</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Infrastructure Review — Has Cumulative Impact Been Assessed?</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-4">With 40 confirmed units on two adjacent parcels sharing a common access and fire lane, no cumulative infrastructure analysis has been conducted — for sewer, water, electrical, stormwater, roadway capacity, or emergency services. The City has never publicly disclosed whether existing infrastructure can safely support this density.</p>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                        <p class="text-xs text-blue-300 font-semibold">40+ confirmed units. One access road. No traffic or emergency access study. Ever.</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
+                    <div class="w-12 h-12 bg-orange-700 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:flame" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-orange-400 mb-2">Question #5</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Fire & Emergency Access Never Reviewed</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-4">This area faces serious wildfire risk, earthquake danger, and already-critical evacuation concerns. Yet no Fire Department review has been conducted — no fire-flow analysis, no hydrant assessment, no emergency ingress/egress review, no roadway-width compliance check, and no evacuation impact analysis. Parthenia Street already gridlocks at peak hours. Adding 40+ households with no emergency access plan is a life-safety issue.</p>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                        <p class="text-xs text-orange-300 font-semibold">No fire review. No evacuation plan. In a high fire risk zone.</p>
+                    </div>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/40 transition-colors">
+                    <div class="w-12 h-12 bg-green-800 rounded-xl flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:shield-x" width="24" class="text-white"></iconify-icon>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-widest text-green-400 mb-2">Question #6</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Zoning Protections — Have ZI-248 Equestrian Provisions Been Addressed?</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-4">Even ministerial projects must comply with all objective zoning standards — setbacks, lot width, frontage, access, height, grading, drainage, parking, and subdivision requirements. We are asking the City to confirm in writing that all objective code standards have been met, even under ministerial processing. Specific overlay protections — including the <strong class="text-white">ZI-248 Equestrian Provisions</strong> and community plan consistency requirements — have never been publicly addressed.</p>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10">
+                        <p class="text-xs text-green-300 font-semibold">Ministerial does not mean lawless. Objective standards still apply.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What The City Must Prove callout -->
+            <div class="mt-10 scroll-reveal bg-red-950/30 border-2 border-red-500/30 rounded-2xl p-8">
+                <div class="text-center mb-6">
+                    <h3 class="font-serif text-2xl font-bold text-white mb-2">What The City Must Prove — In Writing</h3>
+                    <p class="text-stone-400 text-sm">Residents should demand written confirmation that every one of these requirements has been independently verified before any further approval is granted.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10 text-sm text-stone-300 flex items-start gap-2">
+                        <iconify-icon icon="lucide:circle-dot" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>
+                        Was a demolition permit issued? On what date?
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10 text-sm text-stone-300 flex items-start gap-2">
+                        <iconify-icon icon="lucide:circle-dot" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>
+                        Was the structure occupied within 5 years of application?
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10 text-sm text-stone-300 flex items-start gap-2">
+                        <iconify-icon icon="lucide:circle-dot" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>
+                        Was the No Net Loss Declaration independently verified?
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10 text-sm text-stone-300 flex items-start gap-2">
+                        <iconify-icon icon="lucide:circle-dot" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>
+                        Does the full pre-subdivision acreage fall under 1.5 acres?
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10 text-sm text-stone-300 flex items-start gap-2">
+                        <iconify-icon icon="lucide:circle-dot" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>
+                        Were Fire Dept. review, fire-flow, and hydrant analysis conducted?
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10 text-sm text-stone-300 flex items-start gap-2">
+                        <iconify-icon icon="lucide:circle-dot" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>
+                        Have ZI-248 Equestrian Provisions and community plan consistency requirements been addressed?
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10 text-sm text-stone-300 flex items-start gap-2">
+                        <iconify-icon icon="lucide:circle-dot" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>
+                        Has emergency evacuation and roadway-width compliance been reviewed?
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10 text-sm text-stone-300 flex items-start gap-2">
+                        <iconify-icon icon="lucide:circle-dot" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>
+                        Has sewer, water, and stormwater capacity been assessed?
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3 border border-white/10 text-sm text-stone-300 flex items-start gap-2">
+                        <iconify-icon icon="lucide:circle-dot" width="14" class="text-red-400 mt-0.5 shrink-0"></iconify-icon>
+                        Has Subdivision Map Act compliance been fully verified?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TAKE ACTION ========== -->
+    <section id="act" class="py-24 bg-white dark:bg-black relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-stone-100 dark:bg-stone-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-500 mb-4">Take Action</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6">Your Voice <em class="text-red-600 dark:text-red-500">Matters</em></h2>
+                <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-lg">Every single person who speaks up makes a difference. <strong>Call AND email your representatives</strong>, spread the word, and stay connected. For a sample letter to send to your officials, scroll down to the bottom of this page. If we don't fight for Sherwood Forest, your neighborhood could be next.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- Email CTA -->
+                <div class="scroll-reveal">
+                    <div class="bg-stone-900 dark:bg-stone-900 rounded-2xl p-8 text-white relative overflow-hidden border border-stone-700/50">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-red-600/10 rounded-full blur-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center border border-white/10">
+                                    <iconify-icon icon="lucide:video" width="24" class="text-red-400"></iconify-icon>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl">Stay Informed</h3>
+                                    <p class="text-stone-400 text-sm">Get involved — your voice matters</p>
+                                </div>
+                            </div>
+                            <div class="bg-red-600/20 border-2 border-red-500/50 rounded-2xl p-6 text-center">
+                                <p class="text-white text-lg font-bold mb-2">Send us an email to find out more:</p>
+                                <a href="mailto:sherwoodforest91325@proton.me" class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white text-sm font-bold px-6 py-4 rounded-full transition-all email-btn-glow text-center">
+                                    <iconify-icon icon="lucide:mail" width="20" class="shrink-0"></iconify-icon>
+                                    <span>sherwoodforest91325<br>@proton.me</span>
+                                </a>
+                                <p class="text-stone-400 text-sm mt-4">Every neighbor who gets involved makes a difference.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Officials -->
+                <div class="space-y-6">
+                    <div class="scroll-reveal">
+                        <h3 class="font-serif text-xl font-bold mb-2">Contact Your Officials</h3>
+                        <div class="bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-900/50 rounded-xl p-4 mb-4">
+                            <p class="text-red-700 dark:text-red-400 text-sm font-bold flex items-center gap-2 mb-1">
+                                <iconify-icon icon="lucide:phone" width="16"></iconify-icon>
+                                📞 PHONE CALLS ARE MORE POWERFUL THAN EMAILS
+                            </p>
+                            <p class="text-red-600 dark:text-red-400 text-sm">A 2-minute phone call carries far more weight than an email. Please call AND email every official listed below. Be polite but firm — tell them you are a constituent and demand action.</p>
+                        </div>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm">Use our template letter at the bottom of this page, or write your own. Every contact counts.</p>
+                    </div>
+
+                    <!-- John Lee -->
+                    <div class="scroll-reveal bg-white dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 p-5 group hover:border-red-300 dark:hover:border-red-800 transition-colors">
+                        <p class="font-bold">Councilman John Lee</p>
+                        <p class="text-xs text-stone-500 mb-2">CD12 — Northridge</p>
+                        <div class="space-y-1.5">
+                            <a href="tel:+18188821212" class="inline-flex items-center gap-2 text-sm text-stone-700 dark:text-stone-300 font-semibold hover:text-red-600 transition-colors">
+                                <iconify-icon icon="lucide:phone" width="16" class="text-red-500"></iconify-icon>
+                                (818) 882-1212
+                            </a>
+                            <a href="mailto:councilmember.Lee@lacity.org" class="flex items-center gap-2 text-sm text-red-600 dark:text-red-400 font-semibold hover:underline">
+                                <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                                councilmember.Lee@lacity.org
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Assemblywoman Schiavo -->
+                    <div class="scroll-reveal bg-white dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 p-5 hover:border-stone-300 dark:hover:border-stone-700 transition-colors">
+                        <p class="font-bold">Assemblywoman Pilar Schiavo</p>
+                        <p class="text-xs text-stone-500 mb-2">CA Assembly District 40</p>
+                        <div class="space-y-1.5">
+                            <a href="tel:+16612861565" class="inline-flex items-center gap-2 text-sm text-stone-700 dark:text-stone-300 font-semibold hover:text-red-600 transition-colors">
+                                <iconify-icon icon="lucide:phone" width="16" class="text-red-500"></iconify-icon>
+                                (661) 286-1565
+                            </a>
+                            <a href="mailto:assemblymember.schiavo@assembly.ca.gov" class="flex items-center gap-2 text-sm text-red-600 dark:text-red-400 font-semibold hover:underline">
+                                <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                                assemblymember.schiavo@assembly.ca.gov
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Senator Stern -->
+                    <div class="scroll-reveal bg-white dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 p-5 hover:border-stone-300 dark:hover:border-stone-700 transition-colors">
+                        <p class="font-bold">State Senator Henry Stern</p>
+                        <p class="text-xs text-stone-500 mb-2">CA Senate District 27</p>
+                        <div class="space-y-1.5">
+                            <a href="tel:+18188763352" class="inline-flex items-center gap-2 text-sm text-stone-700 dark:text-stone-300 font-semibold hover:text-red-600 transition-colors">
+                                <iconify-icon icon="lucide:phone" width="16" class="text-red-500"></iconify-icon>
+                                (818) 876-3352
+                            </a>
+                            <a href="mailto:Senator.Stern@Senate.Ca.Gov" class="flex items-center gap-2 text-sm text-red-600 dark:text-red-400 font-semibold hover:underline">
+                                <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                                Senator.Stern@Senate.Ca.Gov
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- City Attorney -->
+                    <div class="scroll-reveal bg-white dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 p-5 hover:border-stone-300 dark:hover:border-stone-700 transition-colors">
+                        <p class="font-bold">LA City Attorney — Heidi Feldstein Soto</p>
+                        <p class="text-xs text-stone-500 mb-2">City Attorney's Office</p>
+                        <div class="space-y-1.5">
+                            <a href="tel:+12139788100" class="inline-flex items-center gap-2 text-sm text-stone-700 dark:text-stone-300 font-semibold hover:text-red-600 transition-colors">
+                                <iconify-icon icon="lucide:phone" width="16" class="text-red-500"></iconify-icon>
+                                (213) 978-8100
+                            </a>
+                            <a href="mailto:cityatty.help@lacity.org" class="flex items-center gap-2 text-sm text-red-600 dark:text-red-400 font-semibold hover:underline">
+                                <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                                cityatty.help@lacity.org
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Custodian of Public Records -->
+                    <div class="scroll-reveal bg-white dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 p-5 hover:border-stone-300 dark:hover:border-stone-700 transition-colors">
+                        <p class="font-bold">LA City Planning — Custodian of Public Records</p>
+                        <p class="text-xs text-stone-500 mb-2">Request official documents and formal written responses</p>
+                        <a href="mailto:Planning.CustodianofRecords@lacity.org" class="flex items-center gap-2 text-sm text-red-600 dark:text-red-400 font-semibold hover:underline mt-1">
+                            <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                            Planning.CustodianofRecords@lacity.org
+                        </a>
+                    </div>
+
+                    <!-- LA Planning -->
+                    <div class="scroll-reveal bg-white dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 p-5 hover:border-stone-300 dark:hover:border-stone-700 transition-colors">
+                        <p class="font-bold">LA Department of Planning</p>
+                        <p class="text-xs text-stone-500 mb-2">Case Management & SHRA Division</p>
+                        <div class="space-y-1">
+                            <a href="mailto:Planning.CaseManagement@lacity.org" class="flex items-center gap-2 text-sm text-red-600 dark:text-red-400 font-medium hover:underline">
+                                <iconify-icon icon="lucide:mail" width="14"></iconify-icon>Planning.CaseManagement@lacity.org
+                            </a>
+                            <a href="mailto:planning.SHRA@lacity.org" class="flex items-center gap-2 text-sm text-red-600 dark:text-red-400 font-medium hover:underline">
+                                <iconify-icon icon="lucide:mail" width="14"></iconify-icon>planning.SHRA@lacity.org
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- LADBS -->
+                    <div class="scroll-reveal bg-white dark:bg-stone-900 rounded-xl border border-stone-200 dark:border-stone-800 p-5 hover:border-stone-300 dark:hover:border-stone-700 transition-colors">
+                        <p class="font-bold">LADBS (Building & Safety)</p>
+                        <a href="mailto:records.ladbs@lacity.org" class="inline-flex items-center gap-2 text-sm text-red-600 dark:text-red-400 font-semibold hover:underline mt-1">
+                            <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                            records.ladbs@lacity.org
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Template -->
+            <div class="mt-12 scroll-reveal">
+                <div class="bg-stone-50 dark:bg-stone-900 rounded-2xl border-2 border-red-500 dark:border-red-600 overflow-hidden shadow-2xl">
+                    <button onclick="toggleTemplate()" class="w-full p-6 flex items-center justify-between bg-red-600 hover:bg-red-700 transition-colors text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center shrink-0">
+                                <iconify-icon icon="lucide:send" width="24" class="text-white"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold text-xl">📧 SEND THIS EMAIL NOW</p>
+                                <p class="text-red-200 text-sm mt-0.5">Pre-written formal inquiry with all key evidence — copy and send to officials today</p>
+                            </div>
+                        </div>
+                        <iconify-icon id="template-chevron" icon="lucide:chevron-down" width="24" class="text-white transition-transform duration-300"></iconify-icon>
+                    </button>
+                    <div id="email-template" class="hidden px-6 pb-6 pt-4">
+                        <div class="bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-xl p-4 mb-4">
+                            <p class="text-red-700 dark:text-red-400 text-sm font-bold mb-1">⚠️ PERMITS ARE ACTIVELY MOVING THROUGH PLAN CHECK — TIME IS CRITICAL</p>
+                            <p class="text-red-600 dark:text-red-400 text-sm">Click Copy, paste into your email client, fill in your name and address, and send. Every email counts — the City must log and respond to each one.</p>
+                        </div>
+                        <div class="bg-white dark:bg-stone-800 rounded-xl border border-stone-200 dark:border-stone-700 p-5 text-sm text-stone-700 dark:text-stone-300 font-mono leading-relaxed relative">
+                            <button onclick="copyTemplate()" class="absolute top-3 right-3 bg-red-600 hover:bg-red-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1">
+                                <iconify-icon icon="lucide:clipboard" width="12"></iconify-icon>
+                                Copy
+
+                            </button>
+                            <p class="mb-1"><strong>TO:</strong> planning.SHRA@lacity.org; planning.CaseManagement@lacity.org; Planning.CustodianofRecords@lacity.org</p>
+                            <p class="mb-1"><strong>CC:</strong> councilmember.Lee@lacity.org; cityatty.help@lacity.org; Senator.Stern@Senate.Ca.Gov; assemblymember.schiavo@assembly.ca.gov</p>
+                            <p class="mb-2"><strong>BCC:</strong> sherwoodforest91325@proton.me</p>
+                            <p class="mb-2"><strong>Subject:</strong> FORMAL INQUIRY — VTT-85030-SH-HCA and VTT-85031-SH-HCA — 17545 & 17531 W. Parthenia Street, Northridge CA 91325 — Request for Written Determination</p>
+                            <br>
+                            <p>Dear Ms. Ooms, City Planning Department, and Custodian of Public Records,</p>
+                            <br>
+                            <p>I am a concerned resident of Sherwood Forest, Northridge CA 91325, writing on behalf of myself and fellow neighbors who have expressed deep concern about the above-referenced development and have asked me to formally inquire on their behalf.</p>
+                            <br>
+                            <p>The approved and proposed phases appear designed to allow substantially more dwelling units than the public is being led to believe. Based on the plans currently available, the ultimate buildout could reach approximately 40 confirmed dwelling units (10 homes + 10 JDUs per parcel) with remainder parcels marked for future development. We are formally requesting the City confirm the total anticipated unit count across both parcels before any further permits are processed.</p>
+                            <br>
+                            <p><strong>I. TWO LLCs — SAME OWNER — SAME DAY — FOUR MONTHS BEFORE PURCHASE</strong><br>
+                            California Secretary of State records confirm that both 17545 Parthenia St. LLC and 17531 Parthenia St. LLC were formed on the exact same day — September 24, 2025 — by the same individual, Lior Mandelbaum, at the same address in Sherman Oaks. The property was not purchased until January 30, 2026 — four months later. We formally request a project aggregation analysis under California's anti-piecemealing doctrine before any further permits are processed.</p>
+                            <br>
+                            <p><strong>II. SELF-GRANTED EASEMENT CONFIRMING ONE PROJECT</strong><br>
+                            The approved Tentative Tract Map for VTT-85030 explicitly states: "Owner of Lot 17 is granting easement to the owner of Lot 16 via Tract 85031." This language in the developer's own filed documents confirms both applications are components of one coordinated project. Has the City conducted a formal aggregation analysis? Please provide the written determination.</p>
+                            <br>
+                            <p><strong>III. SINGLE APN — BOTH PARCELS</strong><br>
+                            Both addresses share Assessor Parcel Number 2768-014-013. The County Assessor classifies this as a single "Single Family Residence — Regular Fee Parcel." On what legal basis were two separate applications accepted for a property sharing one APN?</p>
+                            <br>
+                            <p><strong>IV. VACANCY ELIGIBILITY</strong><br>
+                            LADBS records confirm a residence existed on this property since 1941, demolished March 12, 2026 — 33 days before this application was filed. Please provide written confirmation that vacancy eligibility was independently verified.</p>
+                            <br>
+                            <p><strong>V. HISTORICAL PROPERTY RECORDS</strong><br>
+                            LADBS records confirm one house and one garage in 1941 with no records for 17531 as a separate address. On what legal basis is 17531 recognized as a separate legal parcel?</p>
+                            <br>
+                            <p><strong>VI. PERMITS MOVING WHILE CASE ON HOLD</strong><br>
+                            16 building permits were assigned to Plan Check on May 21, 2026 while VTT-85031 remains "On Hold." How can permits advance while the underlying Tract Map case is on hold?</p>
+                            <br>
+                            <p>We respectfully request written responses to each question within 10 business days.</p>
+                            <br>
+                            <p>Respectfully,<br>[Your Name]<br>[Your Address]<br>Northridge, CA 91325<br>[Your Email]<br><br>sherwoodforest.us</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Share -->
+            <div class="mt-10 grid sm:grid-cols-3 gap-4 scroll-reveal">
+                <button onclick="shareAction('twitter')" class="flex items-center justify-center gap-2 bg-black hover:bg-stone-800 text-white font-semibold py-3.5 rounded-xl transition-colors text-sm">
+                    <iconify-icon icon="lucide:share-2" width="18"></iconify-icon>
+                    Share on Twitter/X
+                </button>
+                <button onclick="shareAction('facebook')" class="flex items-center justify-center gap-2 bg-[#1877F2] hover:bg-[#1565c0] text-white font-semibold py-3.5 rounded-xl transition-colors text-sm">
+                    <iconify-icon icon="lucide:facebook" width="18"></iconify-icon>
+                    Share on Facebook
+                </button>
+                <button onclick="shareAction('email')" class="flex items-center justify-center gap-2 bg-stone-800 dark:bg-stone-700 hover:bg-stone-700 dark:hover:bg-stone-600 text-white font-semibold py-3.5 rounded-xl transition-colors text-sm">
+                    <iconify-icon icon="lucide:mail" width="18"></iconify-icon>
+                    Forward to a Neighbor
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ========== LEGAL LETTERS ========== -->
+    <section class="py-24 bg-stone-50 dark:bg-stone-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-stone-600 dark:text-stone-400 mb-4">Formal Correspondence</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6">Our Formal Letters to <em class="text-red-600 dark:text-red-500">City Officials</em></h2>
+                <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Legally-grounded letters and formal complaints have been submitted to City officials and oversight agencies. No responses have been received from the Director of Planning, City Attorney, or City Controller.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+
+                <!-- Letter 1 — 60 signatures demand letter -->
+                <div class="scroll-reveal bg-white dark:bg-stone-900 rounded-2xl border-2 border-red-300 dark:border-red-800 shadow-lg overflow-hidden md:col-span-2">
+                    <div class="bg-red-700 p-4">
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="flex items-center gap-2">
+                                <iconify-icon icon="lucide:users" width="20" class="text-white"></iconify-icon>
+                                <span class="text-white font-bold text-sm">Demand for Legal Review &amp; Immediate Permit Suspension — Signed by 60 Residents</span>
+                            </div>
+                            <span class="text-red-200 text-xs font-semibold shrink-0">June 2026</span>
+                        </div>
+                        <p class="text-red-200 text-xs mt-1">To: Director of Planning, City Attorney, City Controller — No response received</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid sm:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-3 text-center border border-red-200 dark:border-red-900">
+                                <p class="text-3xl font-bold text-red-600">60</p>
+                                <p class="text-xs text-stone-600 dark:text-stone-400">Resident signatories</p>
+                            </div>
+                            <div class="bg-stone-50 dark:bg-stone-800 rounded-xl p-3 text-center border border-stone-200 dark:border-stone-700">
+                                <p class="text-3xl font-bold text-stone-800 dark:text-white">8</p>
+                                <p class="text-xs text-stone-600 dark:text-stone-400">Legal sections</p>
+                            </div>
+                            <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-3 text-center border border-red-200 dark:border-red-900">
+                                <p class="text-3xl font-bold text-red-600">0</p>
+                                <p class="text-xs text-stone-600 dark:text-stone-400">Responses received</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3 text-sm text-stone-600 dark:text-stone-400 mb-6">
+                            <div class="flex items-start gap-2"><span class="w-5 h-5 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">I</span><span><strong class="text-stone-900 dark:text-white">Manufactured Vacancy</strong> — An 80-year estate demolished Feb 16, 2026. SHRA filed 33 days after demo permit finaled. Owner's widow was living there. Property was not abandoned or uninhabitable.</span></div>
+                            <div class="flex items-start gap-2"><span class="w-5 h-5 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">II</span><span><strong class="text-stone-900 dark:text-white">One Project Disguised as Two</strong> — Two LLCs, same day, same owner, before purchase. Self-granted easement on developer's own map. Anti-piecemealing doctrine applies.</span></div>
+                            <div class="flex items-start gap-2"><span class="w-5 h-5 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">III</span><span><strong class="text-stone-900 dark:text-white">One Parcel, Not Two</strong> — Single APN since 1941. Tract Map TR 12338 shows one unified lot. 17531 was only a postal address.</span></div>
+                            <div class="flex items-start gap-2"><span class="w-5 h-5 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">IV</span><span><strong class="text-stone-900 dark:text-white">ADU Density</strong> — Are attached JDUs counted as independent dwelling units for density threshold purposes?</span></div>
+                            <div class="flex items-start gap-2"><span class="w-5 h-5 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">V</span><span><strong class="text-stone-900 dark:text-white">No Traffic Study</strong> — Parthenia is a designated emergency evacuation route. 40+ confirmed units. Zero assessments conducted.</span></div>
+                            <div class="flex items-start gap-2"><span class="w-5 h-5 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">VI</span><span><strong class="text-stone-900 dark:text-white">ZI No. 2438</strong> — RA-1 Equine Keeping District. Form submitted but was it independently reviewed? Distance requirements evaluated?</span></div>
+                            <div class="flex items-start gap-2"><span class="w-5 h-5 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">VII</span><span><strong class="text-stone-900 dark:text-white">Suspend Permits Now</strong> — Formal demand to the City Attorney to direct LADBS to halt all permit processing.</span></div>
+                            <div class="flex items-start gap-2"><span class="w-5 h-5 bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">VIII</span><span><strong class="text-stone-900 dark:text-white">What We Want</strong> — Not a denial. A reimagined project that fits our RA-1 neighborhood. Fewer homes. Replanted trees. Proper process.</span></div>
+                        </div>
+                        <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-4 border border-red-200 dark:border-red-900">
+                            <p class="text-red-700 dark:text-red-400 text-sm font-semibold italic">"This is our neighborhood. A 2.5-acre family estate that stood since 1941 was demolished in a matter of days — with no public hearing, no environmental review, and no notice to neighbors. We are not opposed to housing. We are opposed to a process that was clearly designed to bypass every safeguard that exists for exactly this kind of situation."</p>
+                            <p class="text-red-500 dark:text-red-500 text-xs mt-2 font-medium">— From the letter signed by 60 Sherwood Forest residents, June 2026</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Letter 2 — CD12 Rosales Internal Email -->
+                <div class="scroll-reveal bg-white dark:bg-stone-900 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-lg overflow-hidden">
+                    <div class="bg-stone-700 p-4">
+                        <div class="flex items-center gap-2">
+                            <iconify-icon icon="lucide:mail-open" width="20" class="text-white"></iconify-icon>
+                            <span class="text-white font-bold text-sm">CD12 Internal Email to City Planner — Obtained via Public Records Act</span>
+                        </div>
+                        <p class="text-stone-300 text-xs mt-1">June 11, 2026 — Dan Rosales Jr. to Renata Ooms</p>
+                    </div>
+                    <div class="p-6 space-y-4 text-sm text-stone-600 dark:text-stone-400">
+                        <p class="text-stone-600 dark:text-stone-400 leading-relaxed">This email — produced by the City in response to our Public Records Act request — shows the Planning Director of Council District 12 privately communicating with the assigned City Planner about this project, while simultaneously presenting himself to residents as a neutral resource.</p>
+                        <div class="bg-stone-50 dark:bg-stone-800 rounded-xl p-4 border border-stone-200 dark:border-stone-700">
+                            <p class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">What the email reveals:</p>
+                            <ul class="space-y-2 text-sm">
+                                <li class="flex items-start gap-2"><iconify-icon icon="lucide:alert-circle" width="14" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Referred to Sherwood Forest residents — including attorneys — as <strong class="text-stone-900 dark:text-white">"retirees with too much time on their hands"</strong></li>
+                                <li class="flex items-start gap-2"><iconify-icon icon="lucide:alert-circle" width="14" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Privately requested complete project files through back channels — the same files residents were seeking through official Public Records Act requests</li>
+                                <li class="flex items-start gap-2"><iconify-icon icon="lucide:alert-circle" width="14" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Confirmed CD12 was on the distribution list for the Kingsbury SB 684 project — yet never notified residents or the Neighborhood Council</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 dark:bg-red-950/30 rounded-lg p-3 border border-red-200 dark:border-red-800">
+                            <p class="text-red-700 dark:text-red-400 text-xs font-semibold flex items-center gap-2">
+                                <iconify-icon icon="lucide:scale" width="14"></iconify-icon>
+                                A formal Ethics Commission complaint has been filed based on this document.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Letter 3 — Original demolition hold request -->
+                <div class="scroll-reveal bg-white dark:bg-stone-900 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-lg overflow-hidden">
+                    <div class="bg-amber-600 dark:bg-amber-700 p-4">
+                        <div class="flex items-center gap-2">
+                            <iconify-icon icon="lucide:file-text" width="20" class="text-white"></iconify-icon>
+                            <span class="text-white font-bold text-sm">Earlier Letters to City Officials</span>
+                        </div>
+                        <p class="text-amber-200 text-xs mt-1">December 2025 — January 2026</p>
+                    </div>
+                    <div class="p-6 space-y-4 text-sm text-stone-600 dark:text-stone-400">
+                        <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Prior to our formal demand letter, residents submitted letters to Councilman Lee's office, City Planning, LADBS, and state legislators raising early eligibility and zoning concerns.</p>
+                        <div>
+                            <p class="font-semibold text-stone-900 dark:text-stone-200 mb-2">Issues raised:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2"><span class="w-5 h-5 bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0">1</span>SB 684/SB 1123 eligibility and vacancy status</li>
+                                <li class="flex items-start gap-2"><span class="w-5 h-5 bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0">2</span>ZI-2438 equine zoning protections</li>
+                                <li class="flex items-start gap-2"><span class="w-5 h-5 bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0">3</span>Infrastructure and emergency access capacity</li>
+                                <li class="flex items-start gap-2"><span class="w-5 h-5 bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 rounded-full flex items-center justify-center text-xs font-bold shrink-0">4</span>Anti-piecemealing and project aggregation</li>
+                            </ul>
+                        </div>
+                        <div class="bg-amber-50 dark:bg-amber-950/30 rounded-lg p-3 border border-amber-200 dark:border-amber-800">
+                            <p class="text-amber-700 dark:text-amber-400 text-xs font-semibold flex items-center gap-2">
+                                <iconify-icon icon="lucide:alert-triangle" width="14"></iconify-icon>
+                                Demolition proceeded despite unresolved eligibility questions
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Complaints status bar -->
+            <div class="mt-10 scroll-reveal bg-stone-900 dark:bg-black rounded-2xl p-6 border border-stone-700">
+                <h3 class="font-bold text-white text-lg mb-4 text-center">Formal Complaints Filed — July 2026</h3>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="bg-stone-800 rounded-xl p-4 text-center">
+                        <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center mx-auto mb-2">
+                            <iconify-icon icon="lucide:building-2" width="20" class="text-white"></iconify-icon>
+                        </div>
+                        <p class="text-white font-bold text-sm">LADBS</p>
+                        <p class="text-stone-400 text-xs mt-1">Formal complaint re: permits advancing over BOE objection</p>
+                        <span class="inline-block mt-2 text-xs bg-yellow-600 text-white px-2 py-0.5 rounded-full font-semibold">Filed</span>
+                    </div>
+                    <div class="bg-stone-800 rounded-xl p-4 text-center">
+                        <div class="w-10 h-10 bg-amber-600 rounded-xl flex items-center justify-center mx-auto mb-2">
+                            <iconify-icon icon="lucide:scale" width="20" class="text-white"></iconify-icon>
+                        </div>
+                        <p class="text-white font-bold text-sm">Ethics Commission</p>
+                        <p class="text-stone-400 text-xs mt-1">Complaint re: CD12 conflict of interest</p>
+                        <span class="inline-block mt-2 text-xs bg-yellow-600 text-white px-2 py-0.5 rounded-full font-semibold">Filed</span>
+                    </div>
+                    <div class="bg-stone-800 rounded-xl p-4 text-center">
+                        <div class="w-10 h-10 bg-stone-500 rounded-xl flex items-center justify-center mx-auto mb-2">
+                            <iconify-icon icon="lucide:search" width="20" class="text-white"></iconify-icon>
+                        </div>
+                        <p class="text-white font-bold text-sm">City Controller</p>
+                        <p class="text-stone-400 text-xs mt-1">Fraud, Waste &amp; Abuse complaint re: procedural failures</p>
+                        <span class="inline-block mt-2 text-xs bg-yellow-600 text-white px-2 py-0.5 rounded-full font-semibold">Filed</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== LEGISLATION ========== -->
+    <section id="legislation" class="py-24 bg-white dark:bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+                <span class="inline-block text-xs font-bold uppercase tracking-widest text-red-600 dark:text-red-500 mb-4">Sacramento's New Senate Housing Bills</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6">How State Laws Are <em class="text-red-600 dark:text-red-500">Destroying</em> Neighborhoods</h2>
+                <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-lg">Sacramento has passed a series of bills that strip local communities of zoning protections — intended to address the housing shortage. The result? How these laws are applied in established low-density neighborhoods like Sherwood Forest raises important questions about their intended scope.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6 mb-12">
+                <!-- SB 684 - FIRST (most relevant) -->
+                <div class="scroll-reveal p-6 rounded-2xl border-2 border-red-200 dark:border-red-900/40 bg-red-50/50 dark:bg-red-950/20 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-red-100 dark:bg-red-900/20 rounded-bl-full"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">SB 684</span>
+                            <span class="text-xs font-semibold text-red-600 dark:text-red-400">DIRECTLY USED HERE</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Senate Bill 684 — 10-Unit Subdivisions</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Allows up to 10 residential units on parcels in "urban areas" with ministerial approval — no public hearing, no community input. This is one of the bills being used to push through the Shoshone & Parthenia development without any community review.</p>
+                        <ul class="space-y-1.5 text-sm text-stone-600 dark:text-stone-400">
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Ministerial approval — no public hearings required</li>
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Being used to avoid community planning oversight</li>
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>No environmental review required</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- SB 1123 - SECOND (most relevant) -->
+                <div class="scroll-reveal p-6 rounded-2xl border-2 border-red-200 dark:border-red-900/40 bg-red-50/30 dark:bg-red-950/10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-red-100 dark:bg-red-900/20 rounded-bl-full"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">SB 1123</span>
+                            <span class="text-xs font-semibold text-red-600 dark:text-red-400">DIRECTLY USED HERE</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Senate Bill 1123 — Starter Home Revitalization Act</h3>
+                        <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Expands SB 684 by allowing condominium subdivisions on single-family lots — making it even easier for developers to build, subdivide, and sell with no regard for neighborhood character. Designed for genuinely vacant urban infill land, not established neighborhoods like ours.</p>
+                        <ul class="space-y-1.5 text-sm text-stone-600 dark:text-stone-400">
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Turns single-family lots into condo developments by right</li>
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>No environmental review required</li>
+                            <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Eliminates community input entirely</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- SB 9 -->
+                <div class="scroll-reveal p-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
+                    <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">SB 9</span>
+                    <h3 class="font-bold text-lg mt-3 mb-2">Senate Bill 9 — The Lot Split Loophole</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Allows developers to split single-family lots and build up to 4 units (plus ADUs) on land zoned for one home. Questions have been raised about owner-occupancy affidavit requirements when the same party has multiple applications on the same street.</p>
+                    <ul class="space-y-1.5 text-sm text-stone-600 dark:text-stone-400">
+                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Owner-occupancy affidavit requirements warrant verification</li>
+                        <li class="flex items-start gap-2"><iconify-icon icon="lucide:x-circle" width="16" class="text-red-500 mt-0.5 shrink-0"></iconify-icon>Overrides local RA-1 and Equestrian zoning</li>
+                    </ul>
+                </div>
+                <!-- SB 1211 -->
+                <div class="scroll-reveal p-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
+                    <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">SB 1211</span>
+                    <h3 class="font-bold text-lg mt-3 mb-2">Senate Bill 1211 — ADU Expansion</h3>
+                    <p class="text-stone-600 dark:text-stone-400 text-sm leading-relaxed mb-3">Allows up to 8 ADUs on multifamily properties. Developers use SB 9 to first create "multifamily" parcels, then stack ADUs on top — multiplying the density far beyond what any single bill intended.</p>
+                    <p class="text-stone-500 text-xs italic">The City argues SB 1211 eliminates local control over ADU size limits on SB 9 parcels. Our legal counsel disagrees.</p>
+                </div>
+            </div>
+
+            <!-- Zoning Callout -->
+            <div class="scroll-reveal bg-stone-50 dark:bg-stone-900/50 border-2 border-stone-200 dark:border-stone-800 rounded-2xl p-8">
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shrink-0">
+                        <iconify-icon icon="lucide:shield-alert" width="32" class="text-white"></iconify-icon>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl font-bold mb-3">Zoning Laws Bypassed & Ignored</h3>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="bg-white dark:bg-black rounded-xl p-4 border border-stone-200 dark:border-stone-800">
+                                <p class="text-sm font-bold text-black dark:text-white mb-1">RA-1 Low Residential Zoning</p>
+                                <p class="text-xs text-stone-600 dark:text-stone-400">Designed to protect single-family neighborhoods with large lots and semi-rural character. Completely overridden by SB 9 ministerial approvals.</p>
+                            </div>
+                            <div class="bg-white dark:bg-black rounded-xl p-4 border border-stone-200 dark:border-stone-800">
+                                <p class="text-sm font-bold text-black dark:text-white mb-1">ZI-248 Equestrian Provisions</p>
+                                <p class="text-xs text-stone-600 dark:text-stone-400">Protects equine uses including open area, setbacks, grading, drainage, and access. State housing laws do NOT preempt these objective standards — yet these provisions have not been adequately addressed in the current approval process.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ========== CTA BANNER ========== -->
+    <section class="relative py-20 bg-red-600 text-white overflow-hidden">
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <div class="scroll-reveal">
+                <iconify-icon icon="lucide:shield-alert" width="48" class="text-white/80 mb-6"></iconify-icon>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">Protect Our Neighborhood</h2>
+                <p class="text-red-100 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">If a neighborhood with equestrian protections, RA-1 zoning, and hundreds of mature trees can be transformed at this scale without a single public hearing or community input — no neighborhood in Los Angeles is safe. The time to act is now.</p>
+                <div class="space-y-4">
+                    <div class="flex justify-center">
+                        <a href="mailto:sherwoodforest91325@proton.me" class="inline-flex items-center gap-2 bg-white text-red-600 font-bold text-sm uppercase tracking-wider px-6 py-4 rounded-full transition-all hover:bg-stone-100 max-w-full overflow-hidden">
+                            <iconify-icon icon="lucide:mail" width="18" class="shrink-0"></iconify-icon>
+                            <span class="truncate">sherwoodforest91325@proton.me</span>
+                        </a>
+                    </div>
+                    <p class="text-red-200 text-sm">Email us to find out more and get involved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-black text-stone-400 py-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <iconify-icon icon="lucide:trees" width="24" class="text-red-500"></iconify-icon>
+                        <span class="font-serif font-bold text-lg text-white">Sherwood Forest</span>
+                    </div>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-red-500 mb-4">Northridge 91325</p>
+                    <p class="text-sm leading-relaxed">A community initiative fighting to preserve the character, zoning protections, and tree canopy of Sherwood Forest in Northridge, CA 91325.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#crisis" class="hover:text-red-400 transition-colors">The Crisis</a></li>
+                        <li><a href="#evidence" class="hover:text-red-400 transition-colors">Evidence</a></li>
+                        <li><a href="#voices" class="hover:text-red-400 transition-colors">Neighbor Voices</a></li>
+                        <li><a href="#legislation" class="hover:text-red-400 transition-colors">Legislation</a></li>
+                        <li><a href="#act" class="hover:text-red-400 transition-colors">Take Action</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Key Officials</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:Councilmember.Lee@lacity.org" class="hover:text-red-400 transition-colors">Councilman John Lee</a></li>
+                        <li><a href="mailto:Planning.CaseManagement@lacity.org" class="hover:text-red-400 transition-colors">LA Planning</a></li>
+                        <li><a href="mailto:cityattorney@lacity.org" class="hover:text-red-400 transition-colors">City Attorney</a></li>
+                        <li><a href="mailto:records.ladbs@lacity.org" class="hover:text-red-400 transition-colors">LADBS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Contact Us</h4>
+                    <a href="mailto:sherwoodforest91325@proton.me" class="inline-flex items-center gap-2 text-red-400 hover:text-red-300 font-bold text-sm mb-4 transition-colors break-all">
+                        <iconify-icon icon="lucide:mail" width="16" class="shrink-0"></iconify-icon>
+                        sherwoodforest91325@proton.me
+                    </a>
+                    <p class="text-xs text-stone-600 mt-3">Email us to find out more and get involved.</p>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-stone-600">© 2026 Sherwood Forest Residents. A community initiative. All rights reserved.</p>
+                <p class="text-xs text-stone-700 flex items-center gap-1">
+                    Made with <iconify-icon icon="lucide:heart" width="12" class="text-red-500"></iconify-icon> by neighbors who care
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING EMAIL BUTTON ========== -->
+    <a href="mailto:sherwoodforest91325@proton.me" id="floating-cta" class="fixed bottom-6 right-6 z-50 bg-red-600 hover:bg-red-700 text-white p-4 rounded-full shadow-2xl shadow-red-900/30 transition-all hover:scale-110 group hidden">
+        <iconify-icon icon="lucide:mail" width="24" class="group-hover:scale-110 transition-transform"></iconify-icon>
+    </a>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+        mobileMenuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.querySelector('iconify-icon').setAttribute('icon', menuOpen ? 'lucide:x' : 'lucide:menu');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.querySelector('iconify-icon').setAttribute('icon', 'lucide:menu');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('shadow-md', window.scrollY > 50);
+        });
+
+        const floatingCta = document.getElementById('floating-cta');
+        window.addEventListener('scroll', () => {
+            floatingCta.classList.toggle('hidden', window.scrollY <= 800);
+        });
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3500);
+        }
+
+        function toggleTemplate() {
+            const template = document.getElementById('email-template');
+            const chevron = document.getElementById('template-chevron');
+            template.classList.toggle('hidden');
+            chevron.style.transform = template.classList.contains('hidden') ? '' : 'rotate(180deg)';
+        }
+
+        function copyTemplate() {
+            const templateText = `TO: planning.SHRA@lacity.org; planning.CaseManagement@lacity.org; Planning.CustodianofRecords@lacity.org
+CC: councilmember.Lee@lacity.org; cityatty.help@lacity.org; Senator.Stern@Senate.Ca.Gov; assemblymember.schiavo@assembly.ca.gov
+BCC: sherwoodforest91325@proton.me
+
+Subject: FORMAL INQUIRY — VTT-85030-SH-HCA and VTT-85031-SH-HCA — 17545 & 17531 W. Parthenia Street, Northridge CA 91325 — Request for Written Determination on Project Aggregation, Vacancy Eligibility, and Permit Processing
+
+Dear Ms. Ooms, City Planning Department, and Custodian of Public Records,
+
+I am a concerned resident of Sherwood Forest, Northridge CA 91325, writing on behalf of myself and fellow neighbors who have expressed deep concern about the above-referenced development and have asked me to formally inquire on their behalf.
+
+The approved and proposed phases appear designed to allow substantially more dwelling units than the public is being led to believe. Based on the plans currently available, the ultimate buildout could reach approximately 40 confirmed dwelling units (10 homes + 10 JDUs per parcel) with remainder parcels marked for future development. We are formally requesting the City confirm the total anticipated unit count across both parcels before any further permits are processed.
+
+We are formally requesting written responses to the following questions, which arise directly from publicly available records:
+
+I. TWO LLCs — SAME OWNER — SAME DAY — FOUR MONTHS BEFORE PURCHASE
+
+California Secretary of State records confirm that both 17545 Parthenia St. LLC and 17531 Parthenia St. LLC were formed on the exact same day — September 24, 2025 — by the same individual, Lior Mandelbaum, at the same address: 13351 Riverside Drive #422, Sherman Oaks CA 91423. The property was not purchased until January 30, 2026 — four months later. This demonstrates that both applications represent a single pre-planned coordinated project structured under two separate LLCs. We formally request that the City conduct a project aggregation analysis under California's anti-piecemealing doctrine before any further permits are processed.
+
+II. SELF-GRANTED EASEMENT CONFIRMING ONE PROJECT
+
+The approved Tentative Tract Map for VTT-85030 explicitly states: "Owner of Lot 17 is granting easement to the owner of Lot 16 via Tract 85031." Both parcels are owned by the same individual. This language in the developer's own filed documents confirms that VTT-85030 and VTT-85031 are components of a single coordinated project. Has the City conducted a formal aggregation analysis under California's anti-piecemealing doctrine? If so, please provide the written determination.
+
+III. SINGLE APN — BOTH PARCELS
+
+Both 17545 W. Parthenia Street (Lot 17, Tract 12338) and 17531 W. Parthenia Street (Lot 16, Tract 12338) share the same Assessor Parcel Number: 2768-014-013. The LA County Assessor has always classified this as a single "Single Family Residence — Regular Fee Parcel." On what legal basis were two separate applications accepted for a property sharing one APN?
+
+IV. VACANCY ELIGIBILITY
+
+The approved Tract Map notes "Parcel is currently vacant." LADBS records confirm that a substantial single-family residence existed on this property since 1941 and was demolished via permit finaled March 12, 2026 — approximately 33 days before this application was filed. The City's own SHRA Implementation Memo addresses eligibility when housing has been demolished prior to application. Please provide written confirmation that vacancy eligibility was independently verified and the basis for that determination.
+
+V. HISTORICAL PROPERTY RECORDS
+
+LADBS records confirm that in 1941 there was one house and one garage on this property. There are no historical LADBS records for 17531 W. Parthenia Street as a separate address. On what legal basis is 17531 recognized as a separate legal parcel independent of 17545?
+
+VI. PERMITS MOVING FORWARD WHILE CASE IS ON HOLD
+
+City records show that 16 building permits under Job Numbers B26VN11381 and B26VN11387 were assigned to Plan Check on May 21, 2026 — while VTT-85031 remains listed as "On Hold." Please clarify how building permits can advance through Plan Check while the underlying Vesting Tentative Tract Map case remains on hold.
+
+VII. COUNCILMEMBER NOTIFICATION
+
+Was Councilmember John Lee's office formally notified of and consulted on the approval of the Tentative Tract Map signed on April 28, 2026? Affected residents were never informed of this approval.
+
+We respectfully request written responses to each of the above questions within 10 business days. These are matters of public record and community concern that deserve formal, documented answers.
+
+Thank you for your attention to this urgent matter.
+
+Respectfully,
+[Your Name]
+[Your Address]
+Northridge, CA 91325
+[Your Email]
+
+sherwoodforest.us`;
+            navigator.clipboard.writeText(templateText).then(() => {
+                showToast('Email template copied to clipboard!');
+            }).catch(() => {
+                const textarea = document.createElement('textarea');
+                textarea.value = templateText;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast('Email template copied to clipboard!');
+            });
+        }
+
+        function playYouTubeVideo(el, videoId) {
+            const overlay = el.querySelector('.video-overlay');
+            
+            // Completely hide the overlay so there is no ghosting
+            overlay.style.display = 'none';
+            
+            // Create the YouTube iframe
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            iframe.className = 'absolute inset-0 w-full h-full';
+            iframe.style.border = 'none';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            
+            // Add the iframe to the video container
+            el.appendChild(iframe);
+        }
+
+        function shareAction(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Sherwood Forest in Northridge is under threat — 40 confirmed units planned where 1 home stood, with no public hearing and no community input. Join the fight!');
+            if (platform === 'twitter') window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+            else if (platform === 'facebook') window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+            else if (platform === 'email') window.location.href = `mailto:?subject=Save Sherwood Forest&body=${decodeURIComponent(text)}%0A%0A${decodeURIComponent(url)}`;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' });
+                }
+            });
+        });
+
+        function openLightbox(src, caption) {
+            const lb = document.getElementById('lightbox');
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption;
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>
