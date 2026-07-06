@@ -13,7 +13,7 @@
     <meta name="twitter:image" content="before_aerial_2.png">
     <meta name="twitter:title" content="Protect Our Neighborhood — Sherwood Forest 91325">
     <meta name="twitter:description" content="Developers demolished a beautiful 2.5-acre estate and plan to build 40+ units using state law loopholes — with remainder parcels for future development. Join the fight.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <script>
@@ -684,6 +684,22 @@
                 </div>
             </div>
 
+            <!-- Official Tract Map — right after impact statement -->
+            <div class="mt-8 scroll-reveal">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="flex items-center gap-3 bg-red-700 text-white px-4 py-2 rounded-xl text-sm font-bold shadow-lg">
+                        <iconify-icon icon="lucide:file-text" width="18"></iconify-icon>
+                        This is the OFFICIAL plan filed with the City — Map 85030
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden border-2 border-red-600 cursor-pointer group" onclick="openLightbox('17531_tentative_Revised_tract_map.png', 'Revised Vesting Tentative Tract Map No. 85030 — the official revised plan filed June 3, 2026 showing 10 residential lots + 1 remainder parcel for future use.')">
+                    <img src="17531_tentative_Revised_tract_map.png" alt="Official Revised Tract Map 85030" class="w-full object-contain bg-white group-hover:scale-105 transition-transform duration-700" style="max-height:500px;">
+                    <div class="p-4 bg-white dark:bg-stone-900">
+                        <p class="text-stone-600 dark:text-stone-400 text-sm">Official revised Vesting Tentative Tract Map No. 85030 — filed June 3, 2026. Shows 10 homes (Unit-A + attached JDU each) plus Lot 11 remainder parcel for future development. This is the developer's own submitted plan — not a rendering.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Aerial Rendering — after developer photos -->
             <div class="mt-8 scroll-reveal rounded-2xl overflow-hidden border-2 border-red-600 cursor-pointer group" onclick="openLightbox('aerial_rendering_v3.png', 'Aerial composite overlaid on the actual lot — 40 confirmed units across two parcels, with remainder parcels marked for future development. Where one family home stood since 1941.')">
                 <div class="relative">
@@ -845,14 +861,14 @@
                 </div>
                 <div class="grid sm:grid-cols-2 gap-4">
                     <!-- Full plan -->
-                    <div class="rounded-2xl overflow-hidden border-2 border-red-300 dark:border-red-800 group cursor-pointer" onclick="openLightbox('https://z-cdn-media.chatglm.cn/files/bf90cf54-c874-4ee0-aaf2-7cb2d2951fc8.png?auth_key=1879130623-35ce7e077f5e4b9c8e45868fd78a4f98-0-2f724b27ff845e02a0f24cdb5cc21aa8', 'Vesting Tentative Tract Map No. 85030 — Full plan showing 9 lots carved from one 2.5-acre estate.')">
+                    <div class="rounded-2xl overflow-hidden border-2 border-red-300 dark:border-red-800 group cursor-pointer" onclick="openLightbox('17531_tentative_Revised_tract_map.png', 'Revised Vesting Tentative Tract Map No. 85030 — 10 residential lots + 1 remainder parcel. Filed June 3, 2026. Each lot shows Unit-A with attached JDU. Lot 11 is the remainder parcel for future use.')">
                         <div class="relative bg-white dark:bg-stone-900 overflow-hidden">
-                            <img src="https://z-cdn-media.chatglm.cn/files/bf90cf54-c874-4ee0-aaf2-7cb2d2951fc8.png?auth_key=1879130623-35ce7e077f5e4b9c8e45868fd78a4f98-0-2f724b27ff845e02a0f24cdb5cc21aa8" alt="Vesting Tentative Tract Map — Full plan" class="w-full h-72 object-contain group-hover:scale-105 transition-transform duration-700">
-                            <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">⚠️ Revised Plan — 10 Units + Remainder</div>
+                            <img src="17531_tentative_Revised_tract_map.png" alt="Revised Vesting Tentative Tract Map No. 85030 — 10 lots + remainder parcel" class="w-full h-72 object-contain group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">📋 Official Revised Tract Map — Filed June 3, 2026</div>
                             <div class="absolute top-2 right-2 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded-full">Click to enlarge</div>
                         </div>
                         <div class="p-3 bg-white dark:bg-stone-900">
-                            <p class="text-xs text-stone-600 dark:text-stone-400">Revised plans: 10 residential lots + 1 remainder parcel per application. 20 confirmed units per parcel, 40 total. Remainder parcels marked "Future Use Vacant."</p>
+                            <p class="text-xs text-stone-600 dark:text-stone-400">Official revised tract map: 10 residential lots (Unit-A + attached JDU each) + Lot 11 remainder parcel "For Future Use Vacant" (13,347 sq ft). One of two identical applications — combined: 40 confirmed units.</p>
                         </div>
                     </div>
                     <!-- AI Aerial Rendering — Full 4-Phase Buildout Visualization -->
